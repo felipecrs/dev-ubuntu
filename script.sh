@@ -13,13 +13,12 @@ sudo add-apt-repository -y ppa:git-core/ppa
 $APT_GET update
 $APT_GET --with-new-pkgs -y upgrade
 
+# dkms: Required for VirtualBox Guest Additions
 $APT_GET install -y curl \
                     git \
-                    # Install make
                     build-essential \
-                    python3-pip \ 
+                    python3-pip \
                     python-pip \
-                    # Required for VirtualBox Guest Additions
                     dkms
 
 # Install/update VirtualBox Guest Additions
@@ -31,10 +30,9 @@ VERSION=$(curl -fsS ${BASE_URL}/LATEST-STABLE.TXT)
 curl -fsS ${BASE_URL}/${VERSION}/VBoxGuestAdditions_${VERSION}.iso -o VBoxGuestAdditions.iso
 sudo mkdir -p /mnt/cdrom
 sudo mount -o loop ./VBoxGuestAdditions.iso /mnt/cdrom
-pushd /mnt/cdrom
-sudo sh ./VBoxLinuxAdditions.run --nox11
-popd
-sudo unmount /mnt/cdrom
+yes | sudo /mnt/cdrom/VBoxLinuxAdditions.run --nox11
+sudo umount /mnt/cdrom
+rm -r /mnt/cdrom
 rm ./VBoxGuestAdditions.iso
 ## Check version installed
 echo "VBox Guest Additions (after update)"
@@ -74,7 +72,7 @@ printf '%s\n' '#!/bin/bash' 'docker run -it --rm -v "$(pwd):/work" matejak/argba
 printf '%s\n' '#!/bin/bash' 'docker run -it -e PROGRAM=argbash-init --rm -v "$(pwd):/work" matejak/argbash "$@"' | sudo tee /usr/bin/argbash-init
 sudo chmod +x /usr/bin/argbash /usr/bin/argbash-init
 
-# Remove password from Login keyring 
+# Remove password from Login keyring
 # wget -q http://launchpadlibrarian.net/346793276/python-gnomekeyring_2.32.0+dfsg-4build1_amd64.deb
 # $APT_GET install -y ./python-gnomekeyring_2.32.0+dfsg-4build1_amd64.deb
 # python -c "import gnomekeyring;gnomekeyring.change_password_sync('login', 'vagrant', '');"
