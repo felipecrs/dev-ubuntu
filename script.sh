@@ -68,8 +68,8 @@ newgrp docker
 # rm ./argbash.tar.gz
 
 # Install argbash-docker
-printf '%s\n' '#!/bin/bash' 'docker run -it --rm -v "$(pwd):/work" matejak/argbash "$@"' | sudo tee /usr/bin/argbash
-printf '%s\n' '#!/bin/bash' 'docker run -it -e PROGRAM=argbash-init --rm -v "$(pwd):/work" matejak/argbash "$@"' | sudo tee /usr/bin/argbash-init
+printf '%s\n' '#!/bin/bash' 'docker run -it --rm -v "$(pwd):/work" -u $(id -u):$(id -g) matejak/argbash "$@"' | sudo tee /usr/bin/argbash
+printf '%s\n' '#!/bin/bash' 'docker run -it -e PROGRAM=argbash-init --rm -v "$(pwd):/work" -u $(id -u):$(id -g) matejak/argbash "$@"' | sudo tee /usr/bin/argbash-init
 sudo chmod +x /usr/bin/argbash /usr/bin/argbash-init
 
 # Remove password from Login keyring
