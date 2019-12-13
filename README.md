@@ -1,5 +1,5 @@
-# bionic-4dev
-An Ubuntu 18.04 Bionic Vagrant box with development applications and desktop enabled. It is based on [ubuntu/bionic64](https://app.vagrantup.com/ubuntu/boxes/bionic64).
+# ubuntu1804-4dev
+An Ubuntu 18.04 64-bit Vagrant box with development applications and desktop enabled. It is based on the official base box [ubuntu/bionic64](https://app.vagrantup.com/ubuntu/boxes/bionic64).
 
 ## Requisites
 
@@ -23,8 +23,6 @@ An Ubuntu 18.04 Bionic Vagrant box with development applications and desktop ena
 - jq
 - Latest VirtualBox Guest Additions
 
-## Usage
-
 ### Build
 
 Clone the repository, start a new terminal there, and run:
@@ -32,17 +30,6 @@ Clone the repository, start a new terminal there, and run:
 vagrant up
 ```
 
-### Download from Vagrant Cloud (may be outdated)
+### Vagrant Cloud
 
-Create a new folder (`bionic-4dev`), start a new terminal there, and run:
-```sh
-vagrant init felipecassiors/bionic-4dev
-```
-Edit the `Vagrantfile` and uncomment the `config.vm.provider "virtualbox" do |vb|` block, to make sure the `vb.gui = true` is uncommented. If you want, also customize the `vb.memory = "1024"`. After that, run:
-```sh
-vagrant up
-```
-
-### Configuration
-
-Change the `Vagrantfile` for setting up your VM.
+Sometimes I upload this box to Vagrant Cloud to make it easier to run, by just downloading it. If you plan to use this way, I suggest you to look my other repository: felipecassiors/my-ubuntu1804-4dev.
