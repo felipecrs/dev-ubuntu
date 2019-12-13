@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -x
+set -ex
 
 APT_GET="sudo DEBIAN_FRONTEND=noninteractive apt-get"
 
@@ -11,36 +11,12 @@ sudo rm /etc/machine-id /var/lib/dbus/machine-id && sudo systemd-machine-id-setu
 sudo add-apt-repository -y ppa:git-core/ppa
 
 $APT_GET update
-$APT_GET --with-new-pkgs -y upgrade
 
-# dkms: Required for VirtualBox Guest Additions
-$APT_GET install -y curl \
-                    git \
-                    build-essential \
-                    python3-pip \
-                    python-pip \
-                    dkms
-
-# Install/update VirtualBox Guest Additions
-## Check version installed before
-echo "VBox Guest Additions (before update)"
-lsmod | grep -io vboxguest | xargs modinfo | grep -iw version
-BASE_URL="https://download.virtualbox.org/virtualbox"
-VERSION=$(curl -fsS ${BASE_URL}/LATEST-STABLE.TXT)
-curl -fsS ${BASE_URL}/${VERSION}/VBoxGuestAdditions_${VERSION}.iso -o VBoxGuestAdditions.iso
-sudo mkdir -p /mnt/cdrom
-sudo mount -o loop ./VBoxGuestAdditions.iso /mnt/cdrom
-yes | sudo /mnt/cdrom/VBoxLinuxAdditions.run --nox11
-sudo umount /mnt/cdrom
-rm -r /mnt/cdrom
-rm ./VBoxGuestAdditions.iso
-## Check version installed
-echo "VBox Guest Additions (after update)"
-lsmod | grep -io vboxguest | xargs modinfo | grep -iw version
+$APT_GET install -y git python3-pip python-pip
 
 curl -fsS -O https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 $APT_GET install -y ./google-chrome-stable_current_amd64.deb
-rm ./google-chrome-stable_current_amd64.deb
+rm google-chrome-stable_current_amd64.deb
 
 sudo snap install code --classic
 sudo snap install postman

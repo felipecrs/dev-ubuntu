@@ -1,5 +1,5 @@
 # bionic-4dev
-An Ubuntu 18.04 Bionic Vagrant box with development applications and desktop enabled. It is based on [peru/ubuntu-18.04-desktop-amd64](https://app.vagrantup.com/peru/boxes/ubuntu-18.04-desktop-amd64).
+An Ubuntu 18.04 Bionic Vagrant box with development applications and desktop enabled. It is based on [ubuntu/bionic64](https://app.vagrantup.com/ubuntu/boxes/bionic64).
 
 ## Requisites
 
@@ -34,7 +34,7 @@ vagrant up
 
 ### Download from Vagrant Cloud (may be outdated)
 
-Create a new folder (`bionic-4dev`), start a new terminal there, and run: 
+Create a new folder (`bionic-4dev`), start a new terminal there, and run:
 ```sh
 vagrant init felipecassiors/bionic-4dev
 ```
