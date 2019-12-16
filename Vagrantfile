@@ -20,14 +20,14 @@ Vagrant.configure("2") do |config|
     vb.cpus = "2"
   end
 
-  # Upgrade VirtualBox Guest Additions
-  config.vm.provision "shell", privileged: false, path: "virtualbox-guest-additions.sh"
+  # Upgrade system and install desktop
+  config.vm.provision "shell", privileged: false, path: "upgrade-and-desktop.sh"
 
   # Reboot
   config.vm.provision :reload
 
-  # Upgrade system and install desktop
-  config.vm.provision "shell", privileged: false, path: "upgrade-and-desktop.sh"
+  # Upgrade VirtualBox Guest Additions
+  config.vm.provision "shell", privileged: false, path: "virtualbox-guest-additions.sh"
 
   # Reboot
   config.vm.provision :reload
