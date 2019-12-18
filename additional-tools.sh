@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -ex
+set -ex -o pipefail
 
 APT_GET="sudo DEBIAN_FRONTEND=noninteractive apt-get"
 
@@ -34,6 +34,11 @@ curl -fsSL https://get.docker.com | sudo sh
 sudo usermod -aG docker vagrant
 newgrp docker
 
+# Install Docker Compose
+VERSION=$(curl -fsL https://api.github.com/repos/docker/compose/releases/latest | jq .name -r)
+sudo curl -fsSL "https://github.com/docker/compose/releases/download/${VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
 # Install argbash
 # $APT_GET install -y autoconf
 # curl -s https://api.github.com/repos/matejak/argbash/releases/latest | jq .tarball_url | xargs wget -O argbash.tar.gz
@@ -44,14 +49,6 @@ newgrp docker
 # rm ./argbash.tar.gz
 
 # Install argbash-docker
-printf '%s\n' '#!/bin/bash' 'docker run -it --rm -v "$(pwd):/work" -u $(id -u):$(id -g) matejak/argbash "$@"' | sudo tee /usr/bin/argbash
-printf '%s\n' '#!/bin/bash' 'docker run -it -e PROGRAM=argbash-init --rm -v "$(pwd):/work" -u $(id -u):$(id -g) matejak/argbash "$@"' | sudo tee /usr/bin/argbash-init
-sudo chmod +x /usr/bin/argbash /usr/bin/argbash-init
-
-# Remove password from Login keyring
-# wget -q http://launchpadlibrarian.net/346793276/python-gnomekeyring_2.32.0+dfsg-4build1_amd64.deb
-# $APT_GET install -y ./python-gnomekeyring_2.32.0+dfsg-4build1_amd64.deb
-# python -c "import gnomekeyring;gnomekeyring.change_password_sync('login', 'vagrant', '');"
-# $APT_GET remove -y python-gnomekeyring
-# rm ./python-gnomekeyring_2.32.0+dfsg-4build1_amd64.deb
-# $APT_GET autoremove -y
+printf '%s\n' '#!/bin/bash' 'docker run -it --rm -v "$(pwd):/work" -u "$(id -u):$(id -g)" matejak/argbash "$@"' | sudo tee /usr/local/bin/argbash
+printf '%s\n' '#!/bin/bash' 'docker run -it -e PROGRAM=argbash-init --rm -v "$(pwd):/work" -u "$(id -u):$(id -g)" matejak/argbash "$@"' | sudo tee /usr/local/bin/argbash-init
+sudo chmod +x /usr/local/bin/argbash /usr/local/bin/argbash-init
