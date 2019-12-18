@@ -20,7 +20,7 @@ ADDITIONS_PATH="/media/VBoxGuestAdditions"
 wget --quiet "${BASE_URL}/${VERSION}/${ADDITIONS_ISO}"
 sudo mkdir "${ADDITIONS_PATH}"
 sudo mount -o loop,ro "${ADDITIONS_ISO}" "${ADDITIONS_PATH}"
-sudo "${ADDITIONS_PATH}/VBoxLinuxAdditions.run" --nox11 || [ "$?" = 2 ] && true || false
+sudo "${ADDITIONS_PATH}/VBoxLinuxAdditions.run" || [ "$?" = 2 ] && true || false
 rm "${ADDITIONS_ISO}"
 sudo umount "${ADDITIONS_PATH}"
 sudo rmdir "${ADDITIONS_PATH}"
