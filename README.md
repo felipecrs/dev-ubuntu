@@ -1,6 +1,8 @@
 # ubuntu1804-4dev
 An Ubuntu 18.04 64-bit Vagrant box with development applications and desktop enabled. It is based on the official base box [hashicorp/bionic64](https://app.vagrantup.com/hashicorp/boxes/bionic64).
 
+[![Build Status](https://travis-ci.com/felipecassiors/ubuntu1804-4dev.svg?branch=master)](https://travis-ci.com/felipecassiors/ubuntu1804-4dev)
+
 ## Requisites
 
 - VirtualBox ([download](https://www.virtualbox.org/wiki/Downloads))
