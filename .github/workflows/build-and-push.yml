@@ -1,0 +1,19 @@
+name: Build and push Vagrant Box
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install VirtualBox
+      run: brew cask install virtualbox
+    - name: Install Vagrant
+      run: |
+        brew cask install vagrant
+        vagrant plugin install vagrant-reload
+    - run: vagrant up
+    - run: vagrant package
