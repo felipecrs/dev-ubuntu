@@ -26,13 +26,10 @@ Vagrant.configure("2") do |config|
   # Reboot
   config.vm.provision :reload
 
-  # Upgrade VirtualBox Guest Additions
-  config.vm.provision "shell", privileged: false, path: "virtualbox-guest-additions.sh"
+  # Install the other stuff
+  config.vm.provision "shell", privileged: false, path: "additional-tools.sh"
 
   # Reboot
   config.vm.provision :reload
-
-  # Install the other stuff
-  config.vm.provision "shell", privileged: false, path: "additional-tools.sh"
 
 end
