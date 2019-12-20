@@ -1,5 +1,5 @@
 # ubuntu1804-4dev
-An Ubuntu 18.04 64-bit Vagrant box with development applications and desktop enabled. It is based on the official base box [ubuntu/bionic64](https://app.vagrantup.com/ubuntu/boxes/bionic64).
+An Ubuntu 18.04 64-bit Vagrant box with development applications and desktop enabled. It is based on the official base box [hashicorp/bionic64](https://app.vagrantup.com/hashicorp/boxes/bionic64).
 
 ## Requisites
 
@@ -11,8 +11,9 @@ An Ubuntu 18.04 64-bit Vagrant box with development applications and desktop ena
 - Visual Studio Code
 - Google Chrome
 - Postman
-- Git (real latest version)
+- Git
 - Docker
+- Docker Compose
 - Argbash
 - OpenJDK 8
 - Python3
