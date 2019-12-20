@@ -12,10 +12,10 @@ sudo add-apt-repository -y ppa:git-core/ppa
 
 $APT_GET update
 
-$APT_GET install -y git python3-pip python-pip
+$APT_GET install -qq git python3-pip python-pip
 
-curl -fsS -O https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-$APT_GET install -y ./google-chrome-stable_current_amd64.deb
+wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+$APT_GET install -qq ./google-chrome-stable_current_amd64.deb
 rm google-chrome-stable_current_amd64.deb
 
 sudo snap install code --classic
@@ -30,7 +30,6 @@ sudo npm install -g npm
 
 # Install Docker
 curl -fsSL https://get.docker.com | sudo sh
-# sudo groupadd docker
 sudo usermod -aG docker vagrant
 newgrp docker
 
