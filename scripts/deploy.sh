@@ -2,6 +2,9 @@
 
 set -e -o pipefail
 
+git tag | xargs git tag -d
+git fetch --tags
+
 if git describe --contains &> /dev/null; then # Test if current commit is already tagged
     echo "Running upon a tagged commit"
     PREVIOUSLY_TAGGED_COMMIT=true
