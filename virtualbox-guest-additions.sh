@@ -4,20 +4,20 @@ set -ex
 APT_GET="sudo DEBIAN_FRONTEND=noninteractive apt-get"
 
 # Remove old versions
-$APT_GET remove -y virtualbox-guest-utils virtualbox-guest-x11
+# $APT_GET remove -y virtualbox-guest-utils virtualbox-guest-x11 # We don't need in hashicorp/bionic64
 
 # Install dependencies
 $APT_GET update
-$APT_GET install -y curl linux-headers-$(uname -r) build-essential dkms
+$APT_GET install -qq linux-headers-$(uname -r) build-essential dkms
 
 ## Fetch latest version
 BASE_URL="https://download.virtualbox.org/virtualbox"
-VERSION="$(curl -fsSL "${BASE_URL}/LATEST-STABLE.TXT")"
+VERSION="$(wget -q -O- "${BASE_URL}/LATEST-STABLE.TXT")"
 
 ## Install
 ADDITIONS_ISO="VBoxGuestAdditions_${VERSION}.iso"
 ADDITIONS_PATH="/media/VBoxGuestAdditions"
-wget --quiet "${BASE_URL}/${VERSION}/${ADDITIONS_ISO}"
+wget -q "${BASE_URL}/${VERSION}/${ADDITIONS_ISO}"
 sudo mkdir "${ADDITIONS_PATH}"
 sudo mount -o loop,ro "${ADDITIONS_ISO}" "${ADDITIONS_PATH}"
 sudo "${ADDITIONS_PATH}/VBoxLinuxAdditions.run" || [ "$?" = 2 ] && true || false

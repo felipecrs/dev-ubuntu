@@ -5,14 +5,14 @@ set -ex -o pipefail
 APT_GET="sudo DEBIAN_FRONTEND=noninteractive apt-get"
 
 # Reset machine-id to be able to enable Livepatch
-sudo rm /etc/machine-id /var/lib/dbus/machine-id && sudo systemd-machine-id-setup
+# sudo rm /etc/machine-id /var/lib/dbus/machine-id && sudo systemd-machine-id-setup
 
 # Add Git repository
 sudo add-apt-repository -y ppa:git-core/ppa
 
 $APT_GET update
 
-$APT_GET install -qq git python3-pip python-pip
+$APT_GET install -qq curl git python3-pip python-pip
 
 wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 $APT_GET install -qq ./google-chrome-stable_current_amd64.deb
