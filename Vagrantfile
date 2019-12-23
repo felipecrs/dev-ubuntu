@@ -5,19 +5,19 @@ Vagrant.configure("2") do |config|
   config.vm.box = "bento/ubuntu-18.04"
 
   config.vm.provider "virtualbox" do |vb|
-    vb.gui = true
+  vb.gui = true
 
-    vb.customize ["modifyvm", :id, "--graphicscontroller", "vboxsvga"]
-    vb.customize ["modifyvm", :id, "--accelerate3d", "on"]
-    vb.customize ["modifyvm", :id, "--vram", "128"]
+  vb.customize ["modifyvm", :id, "--graphicscontroller", "vboxsvga"]
+  vb.customize ["modifyvm", :id, "--accelerate3d", "on"]
+  vb.customize ["modifyvm", :id, "--vram", "128"]
 
-    vb.customize ["modifyvm", :id, "--audiocontroller", "hda"]
+  vb.customize ["modifyvm", :id, "--audiocontroller", "hda"]
 
-    vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
-    vb.customize ["modifyvm", :id, "--draganddrop", "bidirectional"]
+  vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
+  vb.customize ["modifyvm", :id, "--draganddrop", "bidirectional"]
 
-    vb.memory = "4096"
-    vb.cpus = "2"
+  vb.memory = "4096"
+  vb.cpus = "2"
   end
 
   # Upgrade system and install desktop
