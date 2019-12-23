@@ -32,5 +32,8 @@ before_deploy:
 
 deploy:
     provider: script
-    script: bash scripts/deploy.sh
+    script: bash ci/deploy.sh
+    on:
+      all_branches: true
     skip_cleanup: true
+
