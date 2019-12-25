@@ -1,6 +1,5 @@
 #!/bin/bash
-
-set -ex -o pipefail
+set -euxo pipefail
 
 APT_GET="sudo DEBIAN_FRONTEND=noninteractive apt-get"
 

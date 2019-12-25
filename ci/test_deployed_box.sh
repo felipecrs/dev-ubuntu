@@ -1,4 +1,4 @@
-#!/bin/bash -euxo pipefail
+#!/bin/bash
 
 (
   echo "Testing the deployed box..." && \
