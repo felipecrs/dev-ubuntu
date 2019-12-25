@@ -12,7 +12,7 @@ sudo add-apt-repository -y ppa:git-core/ppa
 
 $APT_GET update
 
-$APT_GET install -qq curl git python3-pip python-pip
+$APT_GET install -qq curl git python3-pip python-pip openjdk-8-jdk
 
 wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 $APT_GET install -qq ./google-chrome-stable_current_amd64.deb
