@@ -35,4 +35,6 @@ Vagrant.configure("2") do |config|
   # Install the other stuff
   config.vm.provision "shell", privileged: false, path: "additional-tools.sh"
 
+  # Run customization script
+  config.vm.provision "shell", privileged: false, path: "customization.sh"
 end
