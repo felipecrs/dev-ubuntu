@@ -1,4 +1,4 @@
-#!/bin/bash -euo pipefail
+#!/bin/bash
 
 if [ "$SHOULD_PUSH_TAGS" = true ]; then
   echo "Pushing tag to GitHub..."

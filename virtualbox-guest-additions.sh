@@ -1,6 +1,6 @@
 #!/bin/bash
+set -euxo pipefail
 
-set -ex
 APT_GET="sudo DEBIAN_FRONTEND=noninteractive apt-get"
 
 # Remove old versions
