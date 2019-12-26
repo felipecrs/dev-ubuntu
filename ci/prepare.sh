@@ -2,6 +2,8 @@
 
 # This script is intended to be sourced by another
 
+should_push_tags=false
+
 # If branch is master, we push to felipecassiors/ubuntu1804-4dev, else to felipecassiors/ubuntu1804-4dev-dev
 if [ "$TRAVIS_BRANCH" == master ]; then
 	echo "Running upon master branch"
@@ -14,12 +16,11 @@ if [ "$TRAVIS_BRANCH" == master ]; then
 
 	if git describe --contains &> /dev/null; then # Test if current commit is already tagged
 		echo "Running upon a tagged commit"
-		readonly SHOULD_PUSH_TAGS=false
 		GIT_TAG="$(git tag --points-at)"
 		readonly VERSION=${GIT_TAG#v*}
 	else
 		echo "Running upon a untagged commit, bumping patch number and tagging it..."
-		readonly SHOULD_PUSH_TAGS=true
+		should_push_tags=true
 		GIT_TAG=$(bump patch --dry-run)
 		readonly VERSION=${GIT_TAG#v*}
 		git config user.email "travis@travis-ci.org"
@@ -32,14 +33,14 @@ if [ "$TRAVIS_BRANCH" == master ]; then
 			)"
 		git tag -a "$GIT_TAG" -m "$TAG_MESSAGE" > /dev/null
 	fi
-	
+
 	echo "Generating changelog..."
 	readonly LATEST_TAG="$(git tag | sort -r --version-sort | head -1)"
 	readonly SECOND_LATEST_TAG="$(git tag | sort -r --version-sort | head -2 | awk '{split($0, tags, "\n")} END {print tags[1]}')"
 	readonly DESCRIPTION="$(cat <<-_EOT_
 		## Changelog
 		"$(git log "$SECOND_LATEST_TAG"..."$LATEST_TAG"  --pretty=format:"- [%h](http://github.com/felipecassiors/ubuntu1804-4dev/commit/%H) %s")"
-		
+
 		[**Built by Travis**]($TRAVIS_BUILD_WEB_URL)
 		[**View source code in GitHub**](https://github.com/felipecassiors/ubuntu1804-4dev/tree/$GIT_TAG)"
 		_EOT_
