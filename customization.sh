@@ -8,9 +8,6 @@ gsettings set org.gnome.desktop.session idle-delay 0
 # Turn on dark mode
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 
-# Turn on home icon on desktop
-gsettings set org.gnome.nautilus.desktop home-icon-visible true
-
 # Turn off animations
 gsettings set org.gnome.desktop.interface enable-animations false
 
