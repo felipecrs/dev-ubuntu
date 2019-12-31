@@ -39,10 +39,11 @@ if [ "$TRAVIS_BRANCH" == master ]; then
 	readonly SECOND_LATEST_TAG="$(git tag | sort -r --version-sort | head -2 | awk '{split($0, tags, "\n")} END {print tags[1]}')"
 	readonly DESCRIPTION="$(cat <<-_EOT_
 		## Changelog
-		"$(git log "$SECOND_LATEST_TAG"..."$LATEST_TAG"  --pretty=format:"- [%h](http://github.com/felipecassiors/ubuntu1804-4dev/commit/%H) %s")"
+		$(git log "$SECOND_LATEST_TAG"..."$LATEST_TAG"  --pretty=format:'- [%h](http://github.com/felipecassiors/ubuntu1804-4dev/commit/%H) %s')
 
 		[**Built by Travis**]($TRAVIS_BUILD_WEB_URL)
-		[**View source code in GitHub**](https://github.com/felipecassiors/ubuntu1804-4dev/tree/$GIT_TAG)"
+
+		[**View source code in GitHub**](https://github.com/felipecassiors/ubuntu1804-4dev/tree/$GIT_TAG)
 		_EOT_
 		)"
 
