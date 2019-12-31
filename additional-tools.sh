@@ -50,5 +50,3 @@ sudo chmod +x /usr/local/bin/docker-compose
 printf '%s\n' '#!/bin/bash' 'docker run -it --rm -v "$(pwd):/work" -u "$(id -u):$(id -g)" matejak/argbash "$@"' | sudo tee /usr/local/bin/argbash
 printf '%s\n' '#!/bin/bash' 'docker run -it -e PROGRAM=argbash-init --rm -v "$(pwd):/work" -u "$(id -u):$(id -g)" matejak/argbash "$@"' | sudo tee /usr/local/bin/argbash-init
 sudo chmod +x /usr/local/bin/argbash /usr/local/bin/argbash-init
-
-$APT_GET autoremove -qq

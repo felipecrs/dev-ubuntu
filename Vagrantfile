@@ -37,4 +37,8 @@ Vagrant.configure("2") do |config|
 
   # Run customization script
   config.vm.provision "shell", privileged: false, path: "customization.sh"
+
+  # Clean stuff
+  config.vm.provision "shell", privileged: false, path: "clean.sh"
+
 end
