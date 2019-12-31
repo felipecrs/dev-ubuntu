@@ -40,8 +40,8 @@ ResultActive=yes
 _EOT_
 
 # Enable Automatic Login
-sudo sed -i 's/#  AutomaticLoginEnable = true/AutomaticLoginEnable = true/g' /etc/gdm3/custom.conf
-sudo sed -i 's/#  AutomaticLogin = user1/AutomaticLogin = vagrant/g' /etc/gdm3/custom.conf
+sudo sed -i 's/#  AutomaticLoginEnable = true/  AutomaticLoginEnable = true/g' /etc/gdm3/custom.conf
+sudo sed -i 's/#  AutomaticLogin = user1/  AutomaticLogin = vagrant/g' /etc/gdm3/custom.conf
 
 # Add Open in Code to context menu
 wget -qO- https://raw.githubusercontent.com/cra0zy/code-nautilus/master/install.sh | bash
