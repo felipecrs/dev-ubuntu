@@ -30,3 +30,11 @@ git config --global mergetool.vscode.cmd 'code --wait $MERGED'
 # Set VS Code as default diff tool for Git
 git config --global diff.tool vscode
 git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'
+
+# Disable graphical password prompt for Vagrant
+cat <<-_EOT_ | sudo tee -a /var/lib/polkit-1/localauthority/50-local.d/disable-passwords.pkla
+[All]
+Identity=unix-user:vagrant
+Action=*
+ResultActive=yes
+_EOT_
