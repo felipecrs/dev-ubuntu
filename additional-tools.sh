@@ -18,7 +18,8 @@ $APT_GET install -qq \
 	python-pip \
 	openjdk-8-jdk \
 	gnome-tweaks \
-	bash-completion
+	bash-completion \
+	fonts-powerline
 
 wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 $APT_GET install -qq ./google-chrome-stable_current_amd64.deb
