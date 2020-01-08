@@ -30,6 +30,7 @@ sudo snap install postman
 sudo snap install jq
 sudo snap install ruby --classic
 sudo snap install node --channel=12/stable --classic
+sudo snap install shellcheck
 
 sudo npm install -g npm
 
