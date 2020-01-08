@@ -33,10 +33,10 @@ git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'
 
 # Disable graphical password prompt for Vagrant
 cat <<-_EOT_ | sudo tee -a /var/lib/polkit-1/localauthority/50-local.d/disable-passwords.pkla
-[All]
-Identity=unix-user:vagrant
-Action=*
-ResultActive=yes
+	[All]
+	Identity=unix-user:vagrant
+	Action=*
+	ResultActive=yes
 _EOT_
 
 # Enable Automatic Login
@@ -47,7 +47,7 @@ sudo sed -i 's/#  AutomaticLogin = user1/  AutomaticLogin = vagrant/g' /etc/gdm3
 wget -qO- https://raw.githubusercontent.com/cra0zy/code-nautilus/master/install.sh | bash
 
 # Install Bash-it
-echo 'export BASH_IT_THEME="powerline-multiline"' >> ~/.bashrc
+echo 'export BASH_IT_THEME="powerline-multiline"' >>~/.bashrc
 git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
 ~/.bash_it/install.sh --silent
 sed -i 's/# export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=1/export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=1/g' ~/.bashrc

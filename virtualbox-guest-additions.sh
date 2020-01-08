@@ -8,7 +8,7 @@ APT_GET="sudo DEBIAN_FRONTEND=noninteractive apt-get"
 
 # Install dependencies
 $APT_GET update
-$APT_GET install -qq linux-headers-$(uname -r) build-essential dkms
+$APT_GET install -qq linux-headers-"$(uname -r)" build-essential dkms
 
 ## Fetch latest version
 BASE_URL="https://download.virtualbox.org/virtualbox"
@@ -20,7 +20,7 @@ ADDITIONS_PATH="/media/VBoxGuestAdditions"
 wget -q "${BASE_URL}/${VERSION}/${ADDITIONS_ISO}"
 sudo mkdir "${ADDITIONS_PATH}"
 sudo mount -o loop,ro "${ADDITIONS_ISO}" "${ADDITIONS_PATH}"
-sudo "${ADDITIONS_PATH}/VBoxLinuxAdditions.run" || [ "$?" = 2 ] && true || false
+sudo "${ADDITIONS_PATH}/VBoxLinuxAdditions.run" || if [ "$?" = 2 ]; then true; else false; fi
 rm "${ADDITIONS_ISO}"
 sudo umount "${ADDITIONS_PATH}"
 sudo rmdir "${ADDITIONS_PATH}"

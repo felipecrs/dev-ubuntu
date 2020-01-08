@@ -42,7 +42,7 @@ newgrp docker
 
 # Install Docker Compose
 VERSION=$(curl -fsL https://api.github.com/repos/docker/compose/releases/latest | jq .name -r)
-sudo curl -fsSL "https://github.com/docker/compose/releases/download/${VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl -fsSL "https://github.com/docker/compose/releases/download/$VERSION/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
 # Install argbash
