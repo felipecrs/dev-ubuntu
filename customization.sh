@@ -51,3 +51,8 @@ echo 'export BASH_IT_THEME="powerline-multiline"' >>~/.bashrc
 git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
 ~/.bash_it/install.sh --silent
 sed -i 's/# export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=1/export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=1/g' ~/.bashrc
+
+# Configure Git to save passwords using keyring
+sudo apt-get install -qq libsecret-1-0 libsecret-1-dev
+sudo make --directory /usr/share/doc/git/contrib/credential/libsecret
+git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
