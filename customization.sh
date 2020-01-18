@@ -39,9 +39,9 @@ cat <<-_EOT_ | sudo tee -a /var/lib/polkit-1/localauthority/50-local.d/disable-p
 	ResultActive=yes
 _EOT_
 
-# Enable Automatic Login
-sudo sed -i 's/#  AutomaticLoginEnable = true/  AutomaticLoginEnable = true/g' /etc/gdm3/custom.conf
-sudo sed -i 's/#  AutomaticLogin = user1/  AutomaticLogin = vagrant/g' /etc/gdm3/custom.conf
+# Enable Automatic Login (but will still ask for login password when trying to unlock the keyring - such as opening Google Chrome)
+# sudo sed -i 's/#  AutomaticLoginEnable = true/  AutomaticLoginEnable = true/g' /etc/gdm3/custom.conf
+# sudo sed -i 's/#  AutomaticLogin = user1/  AutomaticLogin = vagrant/g' /etc/gdm3/custom.conf
 
 # Add Open in Code to context menu
 wget -qO- https://raw.githubusercontent.com/cra0zy/code-nautilus/master/install.sh | bash
