@@ -1,8 +1,8 @@
 # ubuntu1804-4dev
+[![Build Status](https://travis-ci.com/felipecassiors/ubuntu1804-4dev.svg?branch=master)](https://travis-ci.com/felipecassiors/ubuntu1804-4dev)
+[![Vagrant box size](https://img.shields.io/endpoint?url=https://runkit.io/felipecassiors/vagrant-box-size/branches/master/felipecassiors/ubuntu1804-4dev)](https://app.vagrantup.com/felipecassiors/boxes/ubuntu1804-4dev)
 
 An Ubuntu 18.04 64-bit Vagrant box with desktop enabled and some development tools. It is based on the official base box [hashicorp/bionic64](https://app.vagrantup.com/hashicorp/boxes/bionic64).
-
-[![Build Status](https://travis-ci.com/felipecassiors/ubuntu1804-4dev.svg?branch=master)](https://travis-ci.com/felipecassiors/ubuntu1804-4dev)
 
 ## Requisites
 
