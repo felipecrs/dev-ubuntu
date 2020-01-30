@@ -19,7 +19,6 @@ before_install:
   - wget -q "https://releases.hashicorp.com/vagrant/$VAGRANT_VERSION/vagrant_${VAGRANT_VERSION}_x86_64.deb"
   - sudo apt-get install -qq ./vagrant_${VAGRANT_VERSION}_x86_64.deb
   - rm ./vagrant_${VAGRANT_VERSION}_x86_64.deb
-  - sudo snap install bump
 
 install:
   - vagrant plugin install vagrant-reload
@@ -31,10 +30,12 @@ script:
 
 before_deploy:
   - vagrant destroy -f # Save some disk space in case we need in the deploy test
+  - nvm install lts/*
+  - npm install
 
 deploy:
   provider: script
-  script: bash ci/deploy.sh
+  skip_cleanup: true
+  script: npx semantic-release
   on:
     all_branches: true
-  skip_cleanup: true
