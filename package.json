@@ -1,0 +1,49 @@
+{
+  "name": "ubuntu1804-4dev",
+  "version": "1.0.13",
+  "description": "",
+  "main": "Vagrantfile",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "git-cz || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipecassiors/ubuntu1804-4dev.git"
+  },
+  "keywords": [
+    "virtualbox",
+    "vagrant",
+    "ubuntu",
+    "bionic",
+    "box"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felipecassiors/ubuntu1804-4dev/issues"
+  },
+  "homepage": "https://github.com/felipecassiors/ubuntu1804-4dev#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.1.0",
+    "husky": "^4.2.1"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
