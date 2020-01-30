@@ -2,7 +2,9 @@ language: generic
 
 dist: bionic
 
-if: tag is blank
+branches:
+  only:
+    - "master"
 
 services:
   - xvfb
@@ -36,4 +38,3 @@ deploy:
   on:
     all_branches: true
   skip_cleanup: true
-
