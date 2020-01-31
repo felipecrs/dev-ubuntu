@@ -22,16 +22,10 @@ Vagrant.configure("2") do |config|
   end
 
   # Upgrade system and install desktop
-  config.vm.provision "shell", privileged: false, path: "upgrade-and-desktop.sh"
-
-  # Reboot
-  config.vm.provision :reload
+  config.vm.provision "shell", privileged: false, path: "upgrade-and-desktop.sh", reboot: true
 
   # Upgrade VirtualBox Guest Additions
-  config.vm.provision "shell", privileged: false, path: "virtualbox-guest-additions.sh"
-
-  # Reboot
-  config.vm.provision :reload
+  config.vm.provision "shell", privileged: false, path: "virtualbox-guest-additions.sh", reboot: true
 
   # Install the other stuff
   config.vm.provision "shell", privileged: false, path: "additional-tools.sh"
