@@ -8,11 +8,11 @@ APT_GET="sudo DEBIAN_FRONTEND=noninteractive apt-get"
 
 # Install dependencies
 $APT_GET update
-$APT_GET install -qq linux-headers-"$(uname -r)" build-essential dkms
+$APT_GET install -qq "linux-headers-$(uname -r)" build-essential dkms
 
 ## Fetch latest version
 BASE_URL="https://download.virtualbox.org/virtualbox"
-VERSION="$(wget -q -O- "${BASE_URL}/LATEST-STABLE.TXT")"
+VERSION="$(wget -q -O- "${BASE_URL}/LATEST.TXT")"
 
 ## Install
 ADDITIONS_ISO="VBoxGuestAdditions_${VERSION}.iso"
