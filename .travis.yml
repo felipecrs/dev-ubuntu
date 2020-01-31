@@ -20,9 +20,6 @@ before_install:
   - sudo apt-get install -qq ./vagrant_${VAGRANT_VERSION}_x86_64.deb
   - rm ./vagrant_${VAGRANT_VERSION}_x86_64.deb
 
-install:
-  - vagrant plugin install vagrant-reload
-
 script:
   - set -e
   - vagrant up
