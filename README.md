@@ -1,10 +1,16 @@
-# Ubuntu 18.04 for developers
+# **Ubuntu 18.04 for developers**
+
+## A Vagrant box with desktop plus some tweaks and tools for developers
+
 [![Build Status](https://travis-ci.com/felipecassiors/ubuntu1804-4dev.svg?branch=master)](https://travis-ci.com/felipecassiors/ubuntu1804-4dev)
-[![Vagrant box size](https://img.shields.io/endpoint?url=https://runkit.io/felipecassiors/vagrant-box-size/branches/master/felipecassiors/ubuntu1804-4dev)](https://app.vagrantup.com/felipecassiors/boxes/ubuntu1804-4dev)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![Vagrant box size](https://img.shields.io/endpoint?url=https://runkit.io/felipecassiors/vagrant-box-size/4.0.0/felipecassiors/ubuntu1804-4dev)](https://app.vagrantup.com/felipecassiors/boxes/ubuntu1804-4dev)
 
-An Ubuntu 18.04 64-bit Vagrant box with desktop enabled and some development tools. It is based on the official base box [bento/ubuntu-18.04](https://app.vagrantup.com/bento/boxes/ubuntu-18.04).
+It is based on the [Chef Bento](http://chef.github.io/bento/) [ubuntu-18.04](https://app.vagrantup.com/bento/boxes/ubuntu-18.04), the one behind the  [hashicorp/bionic64](https://app.vagrantup.com/hashicorp/boxes/bionic64) official base box.
 
-## Requisites
+## **Requisites**
 
 - VirtualBox ([download here](https://www.virtualbox.org/wiki/Downloads))
 - Vagrant ([download here](https://www.vagrantup.com/downloads.html))
