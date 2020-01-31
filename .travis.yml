@@ -11,10 +11,10 @@ services:
 
 before_install:
   - sudo apt-get update
-  - sudo apt-get install -qq linux-headers-`uname -r`
+  - sudo apt-get install -qq "linux-headers-$(uname -r)"
   - wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
   - sudo add-apt-repository -y "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib"
-  - sudo apt-get install -qq virtualbox-6.0
+  - sudo apt-get install -qq virtualbox-6.1
   - VAGRANT_VERSION="$(wget -q -O- https://releases.hashicorp.com/vagrant/ | fgrep 'href="/vagrant' | head -1 | sed -r 's/.*([0-9].[0-9].[0-9]).*/\1/')"
   - wget -q "https://releases.hashicorp.com/vagrant/$VAGRANT_VERSION/vagrant_${VAGRANT_VERSION}_x86_64.deb"
   - sudo apt-get install -qq ./vagrant_${VAGRANT_VERSION}_x86_64.deb

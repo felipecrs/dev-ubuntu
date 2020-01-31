@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
 
     vb.customize ["modifyvm", :id, "--audiocontroller", "hda"]
 
-    vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
+    vb.customize ["modifyvm", :id, "--clipboard-mode", "bidirectional"]
     vb.customize ["modifyvm", :id, "--draganddrop", "bidirectional"]
 
     vb.memory = "4096"
