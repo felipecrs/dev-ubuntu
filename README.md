@@ -21,25 +21,25 @@ This box is available on [Vagrant Cloud](https://app.vagrantup.com/felipecassior
 
 1. Create a new folder on your computer, like `C:\my-ubuntu1804-4dev`.
 2. Open a new terminal there and run `vagrant init felipecassiors/ubuntu1804-4dev`.
-3. Notice that a new file called `Vagrantfile` was created. In this file, you can set your options for your VM. For a good example, check my other repository: [my-ubuntu1804-4dev](https://github.com/felipecassiors/my-ubuntu1804-4dev).
+3. Notice that a new file called `Vagrantfile` was created. In this file, you can set your personal options for your VM. For a good example, check [my-ubuntu1804-4dev](https://github.com/felipecassiors/my-ubuntu1804-4dev).
 4. Run `vagrant up` and be happy!
 
 ## **Automated Build**
 
-This box is automatically built by [Travis](https://travis-ci.com/felipecassiors/ubuntu1804-4dev). Every new commit triggers a new build. He bumps the version and pushes a new tag on the repository, as long as it also releases a new version on Vagrant Cloud. The loop also tests the new deployed box before releasing it by running `vagrant up` of that version. If it fails, it doesn't release the version and deletes it. For more details check the [`.travis.yml`](.travis.yml) and also the [scripts/deploy.sh](scripts/deploy.sh).
+This box is automatically built by [Travis](https://travis-ci.com/felipecassiors/ubuntu1804-4dev). Every new commit triggers a new build. We use [`semantic-release`](https://github.com/semantic-release/semantic-release) to determine whether we need to release a new version. The loop also tests the new deployed box before releasing it by running `vagrant up` on that version. If it fails, it doesn't release the version and deletes it. For more details check the [`.travis.yml`](.travis.yml) and also the [`ci/deploy.sh`](ci/deploy.sh).
 
 The whole process is:
 
 1. Check out the repository
-2. Install the dependencies (VirtualBox and Vagrant for example)
+2. Install the dependencies (VirtualBox and Vagrant)
 3. `vagrant up`
 4. `vagrant package`
-5. Bumps the version and create a new tag if not running upon a tagged commit
+5. Run `semantic-release` to determine whether the build should be released or not and generate the release notes
 6. Create a new version and upload the box to the Vagrant Cloud
-7. Try to `vagrant up` this uploaded box
-8. If the last step succeeds, release the version on Vagrant Cloud and push the tag on GitHub (if created). Else, delete the version on Vagrant Cloud and fail the build.
+7. Try to run a `vagrant up` of the uploaded box
+8. If the last step succeeds, release the version on [Vagrant Cloud](https://app.vagrantup.com/felipecassiors/boxes/ubuntu1804-4dev), commit the [CHANGELOG](CHANGELOG.md) and create a [GitHub Release](https://github.com/felipecassiors/ubuntu1804-4dev/releases).
 
-## **Features**
+## **Tools**
 
 - Visual Studio Code
 - Google Chrome
@@ -73,7 +73,7 @@ vagrant package
 
 ### Deploy
 
-If you want to deploy it in your Vagrant Cloud, you can use the [`ci/deploy.sh`](scripts/deploy.sh). It needs the `VAGRANT_CLOUD_TOKEN` to be set before running.
+If you want to deploy it in your Vagrant Cloud, you can use the [`ci/deploy.sh`](scripts/deploy.sh). It needs the `VAGRANT_CLOUD_TOKEN` environment variable to be set before running.
 
 ``` bash
 ci/deploy.sh
