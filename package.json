@@ -1,42 +1,23 @@
 {
   "name": "ubuntu1804-4dev",
   "version": "2.0.0",
-  "description": "",
-  "main": "Vagrantfile",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "commit": "git-cz || true"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/felipecassiors/ubuntu1804-4dev.git"
+    "url": "https://github.com/felipecassiors/ubuntu1804-4dev.git"
   },
-  "keywords": [
-    "virtualbox",
-    "vagrant",
-    "ubuntu",
-    "bionic",
-    "box"
-  ],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/felipecassiors/ubuntu1804-4dev/issues"
-  },
-  "homepage": "https://github.com/felipecassiors/ubuntu1804-4dev#readme",
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@semantic-release/changelog": "^5.0.0",
-    "@semantic-release/commit-analyzer": "^8.0.0",
+    "@semantic-release/commit-analyzer": "^8.0.1",
     "@semantic-release/exec": "^5.0.0",
     "@semantic-release/git": "^9.0.0",
-    "@semantic-release/github": "^7.0.0",
+    "@semantic-release/github": "^7.0.1",
     "@semantic-release/release-notes-generator": "^9.0.0",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.1.0",
     "husky": "^4.2.1",
-    "semantic-release": "^17.0.1"
+    "semantic-release": "^17.0.2"
   },
   "commitlint": {
     "extends": [
