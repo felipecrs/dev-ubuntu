@@ -1,6 +1,6 @@
 # **Ubuntu 18.04 for developers**
 
-## A Vagrant box with desktop plus some tweaks and tools for developers
+## A Vagrant box with desktop, tools, and adjustments for developers
 
 [![Gitter](https://badges.gitter.im/ubuntu1804-4dev/community.svg)](https://gitter.im/ubuntu1804-4dev/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/felipecassiors/ubuntu1804-4dev)
