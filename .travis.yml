@@ -1,35 +1,22 @@
-language: generic
-
-dist: bionic
-
 branches:
   only:
     - "master"
-
+language: generic
+os: linux
+dist: bionic
 services:
   - xvfb
-
 before_install:
-  - sudo apt-get update
-  - sudo apt-get install -qq "linux-headers-$(uname -r)"
-  - wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
-  - sudo add-apt-repository -y "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib"
-  - sudo apt-get install -qq virtualbox-6.1
-  - VAGRANT_VERSION="$(wget -q -O- https://releases.hashicorp.com/vagrant/ | fgrep 'href="/vagrant' | head -1 | sed -r 's/.*([0-9].[0-9].[0-9]).*/\1/')"
-  - wget -q "https://releases.hashicorp.com/vagrant/$VAGRANT_VERSION/vagrant_${VAGRANT_VERSION}_x86_64.deb"
-  - sudo apt-get install -qq ./vagrant_${VAGRANT_VERSION}_x86_64.deb
-  - rm ./vagrant_${VAGRANT_VERSION}_x86_64.deb
-
+  - curl -fsSLo- https://raw.githubusercontent.com/felipecassiors/scripts/master/install_virtualbox.sh | bash
+  - curl -fsSLo- https://raw.githubusercontent.com/felipecassiors/scripts/master/install_vagrant.sh | bash
 script:
   - set -e
   - vagrant up
   - vagrant package
-
 before_deploy:
   - vagrant destroy -f # Save some disk space in case we need in the deploy test
   - nvm install lts/*
   - npm install
-
 deploy:
   provider: script
   skip_cleanup: true
