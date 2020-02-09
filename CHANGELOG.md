@@ -1,3 +1,10 @@
+### [2.0.1](https://github.com/felipecassiors/ubuntu1804-4dev/compare/v2.0.0...v2.0.1) (2020-02-09)
+
+
+### Bug Fixes
+
+* **provision:** put provision scripts into their own folder ([453cf53](https://github.com/felipecassiors/ubuntu1804-4dev/commit/453cf53fde8bf9a4e25e9419faabf6e0cd737125))
+
 ## [2.0.0](https://github.com/felipecassiors/ubuntu1804-4dev/compare/v1.0.13...v2.0.0) (2020-01-31)
 
 
