@@ -1,6 +1,6 @@
-# **Ubuntu 18.04 for developers**
+# **Ubuntu 18.04 for developers** <!-- omit in toc -->
 
-## A Vagrant box with desktop, tools, and adjustments for developers
+## A Vagrant box with desktop, tools, and adjustments for developers <!-- omit in toc -->
 
 [![Gitter](https://badges.gitter.im/ubuntu1804-4dev/community.svg)](https://gitter.im/ubuntu1804-4dev/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/felipecassiors/ubuntu1804-4dev)
@@ -11,6 +11,13 @@
 [![Vagrant box size](https://img.shields.io/endpoint?url=https://runkit.io/felipecassiors/vagrant-box-size/6.0.0/felipecassiors/ubuntu1804-4dev)](https://app.vagrantup.com/felipecassiors/boxes/ubuntu1804-4dev)
 
 It is based on the [Chef Bento](http://chef.github.io/bento/) [ubuntu-18.04](https://app.vagrantup.com/bento/boxes/ubuntu-18.04), the one behind the  [hashicorp/bionic64](https://app.vagrantup.com/hashicorp/boxes/bionic64) official base box.
+
+- [**Requisites**](#requisites)
+- [**Vagrant Cloud**](#vagrant-cloud)
+- [**Automated Build**](#automated-build)
+- [**Tools**](#tools)
+  - [Build it manually](#build-it-manually)
+  - [Deploy](#deploy)
 
 ## **Requisites**
 
