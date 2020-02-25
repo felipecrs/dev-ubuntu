@@ -1,22 +1,10 @@
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
+# This Vagrantfile is used to build the box and doesn't come packaged in it.
+# The one which comes packaged in the box is the src/Vagrantfile.
 
 Vagrant.configure("2") do |config|
-    config.vm.box = "bento/ubuntu-18.04"
+  config.vm.box = "bento/ubuntu-18.04"
 
-    config.vm.provider "virtualbox" do |vb|
-    vb.gui = true
-
-    vb.customize ["modifyvm", :id, "--graphicscontroller", "vmsvga"]
-    vb.customize ["modifyvm", :id, "--accelerate3d", "on"]
-    vb.customize ["modifyvm", :id, "--vram", "128"]
-    vb.customize ["modifyvm", :id, "--vrde", "off"]
-
-    vb.customize ["modifyvm", :id, "--audiocontroller", "hda"]
-
-    vb.customize ["modifyvm", :id, "--clipboard-mode", "bidirectional"]
-    vb.customize ["modifyvm", :id, "--draganddrop", "bidirectional"]
-
+  config.vm.provider "virtualbox" do |vb|
     vb.memory = "4096"
     vb.cpus = "2"
   end
