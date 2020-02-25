@@ -12,7 +12,7 @@ before_install:
 script:
   - set -e
   - vagrant up
-  - vagrant package
+  - vagrant package --vagrantfile src/Vagrantfile
 before_deploy:
   - vagrant destroy -f # Save some disk space in case we need in the deploy test
   - nvm install lts/*
