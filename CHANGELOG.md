@@ -1,3 +1,16 @@
+## [3.0.0](https://github.com/felipecassiors/ubuntu1804-4dev/compare/v2.0.2...v3.0.0) (2020-02-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* since now there is a default Vagrantfile package with this box, you don't have to define some options again, such as the `vb.gui = true`
+* **desktop:** if you were used to the default look of Ubuntu, this is a major change.
+
+### Features
+
+* add a default Vagrantfile with default options ([0ff2e1d](https://github.com/felipecassiors/ubuntu1804-4dev/commit/0ff2e1dd931332fbfd1ff14a36987ac39f9f5d52)), closes [#13](https://github.com/felipecassiors/ubuntu1804-4dev/issues/13)
+* **desktop:** switch to Flat Remix theme ([f09141b](https://github.com/felipecassiors/ubuntu1804-4dev/commit/f09141bfd9e73e4df1337e32518affdc3cc0d65b)), closes [#17](https://github.com/felipecassiors/ubuntu1804-4dev/issues/17)
+
 ### [2.0.2](https://github.com/felipecassiors/ubuntu1804-4dev/compare/v2.0.1...v2.0.2) (2020-02-17)
 
 
