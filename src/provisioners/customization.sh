@@ -5,9 +5,6 @@ set -euxo pipefail
 # you pass 5 minutes away of the VM
 gsettings set org.gnome.desktop.session idle-delay 0
 
-# Turn on dark mode
-gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
-
 # Turn off animations
 gsettings set org.gnome.desktop.interface enable-animations false
 
