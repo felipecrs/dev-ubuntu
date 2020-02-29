@@ -1,3 +1,17 @@
+## [4.0.0](https://github.com/felipecassiors/ubuntu1804-4dev/compare/v3.0.0...v4.0.0) (2020-02-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **virtualbox:** The `modifyvm --clipboard-mode` introduced in VirtualBox 6.1 does not work with the
+Guest Additions version 6.0 (the currently stable one). However, VirtualBox 6.1.4 restored the
+compatibility with the old `--clipboard` option so make sure to update your VirtualBox.
+
+### Bug Fixes
+
+* **desktop:** remove theme override ([fbe44b1](https://github.com/felipecassiors/ubuntu1804-4dev/commit/fbe44b12d92686ead3c9c497196ab57358d3b8eb))
+* **virtualbox:** revert guest additions to stable version ([cfa1d3e](https://github.com/felipecassiors/ubuntu1804-4dev/commit/cfa1d3ec60c4823eed1718d3689c88277a3e2ce4)), closes [#22](https://github.com/felipecassiors/ubuntu1804-4dev/issues/22)
+
 ## [3.0.0](https://github.com/felipecassiors/ubuntu1804-4dev/compare/v2.0.2...v3.0.0) (2020-02-25)
 
 
