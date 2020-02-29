@@ -1,6 +1,28 @@
 #!/bin/bash
 set -euxo pipefail
 
+pushd /tmp/
+git clone https://github.com/home-sweet-gnome/dash-to-panel.git
+pushd dash-to-panel/
+make install
+popd
+popd
+
+mkdir -p "$HOME/Pictures/Wallpapers/"
+wget -q https://w.wallhaven.cc/full/ox/wallhaven-ox19m9.jpg -O "$HOME/Pictures/Wallpapers/wallhaven-ox19m9.jpg"
+gsettings set org.gnome.desktop.background picture-uri "file://$HOME/Pictures/Wallpapers/wallhaven-ox19m9.jpg"
+gsettings set org.gnome.desktop.screensaver picture-uri "file://$HOME/Pictures/Wallpapers/wallhaven-ox19m9.jpg"
+
+sudo add-apt-repository -y ppa:daniruiz/flat-remix
+sudo apt-get update
+sudo apt-get install -y gnome-shell-extensions flat-remix flat-remix-gtk flat-remix-gnome
+
+gnome-shell-extension-tool -e user-theme@gnome-shell-extensions.gcampax.github.com
+gnome-shell-extension-tool -e dash-to-panel@jderose9.github.com
+gsettings set org.gnome.desktop.interface gtk-theme "Flat-Remix-GTK-Blue-Dark-Solid"
+gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix-Blue-Dark"
+gsettings set org.gnome.shell.extensions.user-theme name "Flat-Remix-Dark-fullPanel"
+
 # Turn off blank screen to do not ask for password every time
 # you pass 5 minutes away of the VM
 gsettings set org.gnome.desktop.session idle-delay 0
@@ -29,12 +51,12 @@ git config --global diff.tool vscode
 git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'
 
 # Disable graphical password prompt for Vagrant
-cat <<-_EOT_ | sudo tee -a /var/lib/polkit-1/localauthority/50-local.d/disable-passwords.pkla
+cat <<-EOT | sudo tee -a /var/lib/polkit-1/localauthority/50-local.d/disable-passwords.pkla
 	[All]
 	Identity=unix-user:vagrant
 	Action=*
 	ResultActive=yes
-_EOT_
+EOT
 
 # Enable Automatic Login (but will still ask for login password when trying to unlock the keyring - such as opening Google Chrome)
 # sudo sed -i 's/#  AutomaticLoginEnable = true/  AutomaticLoginEnable = true/g' /etc/gdm3/custom.conf
