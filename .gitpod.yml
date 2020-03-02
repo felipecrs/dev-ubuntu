@@ -1,6 +1,18 @@
 image:
   file: .gitpod.Dockerfile
 
+tasks:
+  - init: npm install
+
 vscode:
   extensions:
     - timonwong.shellcheck@0.9.0:hsU/Rd39aqPYowTqL+DbXg==
+    - DavidAnson.vscode-markdownlint@0.34.0:l4DL7iPpo7DdhfUHIUtcuQ==
+    - yzhang.markdown-all-in-one@2.7.0:5+DmuGcePw8L9PtfgOAAHg==
+    - rogalmic.bash-debug@0.3.7:VWcHnWt5BpmFsMTEe2SEVA==
+    - rebornix.ruby@0.27.0:b86Iqz+ryuS7Nr77EyIClA==
+    - mads-hartmann.bash-ide-vscode@1.4.0:/qx+rdXE/fGTGWhelNf3aQ==
+    - wingrunr21.vscode-ruby@0.27.0:VymtAvJQnv5jef/FsPtqJw==
+    - esbenp.prettier-vscode@3.20.0:37/f4uBlE287wUjENFq1aA==
+    - KnisterPeter.vscode-commitizen@0.8.4:tJDfPxv5PRJLQfq/0wAm3w==
+    - misogi.ruby-rubocop@0.8.3:ptn+lTc9xnktGhPEYKIf2w==
