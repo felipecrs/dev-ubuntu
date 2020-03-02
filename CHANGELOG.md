@@ -1,3 +1,10 @@
+### [4.0.1](https://github.com/felipecassiors/ubuntu1804-4dev/compare/v4.0.0...v4.0.1) (2020-03-02)
+
+
+### Bug Fixes
+
+* **desktop:** flat remix theme not being applied ([42272a7](https://github.com/felipecassiors/ubuntu1804-4dev/commit/42272a734f2bf00516611c653d306d58ad5f48fd)), closes [#24](https://github.com/felipecassiors/ubuntu1804-4dev/issues/24)
+
 ## [4.0.0](https://github.com/felipecassiors/ubuntu1804-4dev/compare/v3.0.0...v4.0.0) (2020-02-29)
 
 
