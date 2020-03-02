@@ -1,3 +1,10 @@
+## [4.1.0](https://github.com/felipecassiors/ubuntu1804-4dev/compare/v4.0.1...v4.1.0) (2020-03-02)
+
+
+### Features
+
+* **desktop:** revert to the default ubuntu wallpaper ([93af77c](https://github.com/felipecassiors/ubuntu1804-4dev/commit/93af77ca3b1b001a4c1ded4eb85e5f71468bf459)), closes [#26](https://github.com/felipecassiors/ubuntu1804-4dev/issues/26)
+
 ### [4.0.1](https://github.com/felipecassiors/ubuntu1804-4dev/compare/v4.0.0...v4.0.1) (2020-03-02)
 
 
