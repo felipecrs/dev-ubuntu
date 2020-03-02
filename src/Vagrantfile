@@ -1,28 +1,30 @@
+# frozen_string_literal: true
+
 # This is the Vagrantfile that comes packaged in the box
 # Above are the default settings we define for this box
 
-Vagrant.configure("2") do |config|
-
+Vagrant.configure('2') do |config|
   # Insert SSH key (but sadly this doesn't work on Windows Host with Git Bash)
-  config.ssh.forward_agent = true
+  config.ssh.forward_agent =
+    true
 
-  config.vm.provider "virtualbox" do |vb|
+  config.vm.provider 'virtualbox' do |vb|
     vb.gui = true
 
-    vb.customize ["modifyvm", :id, "--graphicscontroller", "vmsvga"]
-    vb.customize ["modifyvm", :id, "--accelerate3d", "on"]
-    vb.customize ["modifyvm", :id, "--vram", "128"]
-    vb.customize ["modifyvm", :id, "--vrde", "off"]
+    vb.customize ['modifyvm', :id, '--graphicscontroller', 'vmsvga']
+    vb.customize ['modifyvm', :id, '--accelerate3d', 'on']
+    vb.customize ['modifyvm', :id, '--vram', '128']
+    vb.customize ['modifyvm', :id, '--vrde', 'off']
 
-    vb.customize ["modifyvm", :id, "--audiocontroller", "hda"]
+    vb.customize ['modifyvm', :id, '--audiocontroller', 'hda']
 
-    vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
-    vb.customize ["modifyvm", :id, "--draganddrop", "bidirectional"]
+    vb.customize ['modifyvm', :id, '--clipboard', 'bidirectional']
+    vb.customize ['modifyvm', :id, '--draganddrop', 'bidirectional']
 
     # Make the DNS calls be resolved on host
-    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    vb.customize ['modifyvm', :id, '--natdnshostresolver1', 'on']
 
-    vb.memory = "4096"
-    vb.cpus = "2"
+    vb.memory = '4096'
+    vb.cpus = '2'
   end
 end
