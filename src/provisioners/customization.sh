@@ -8,10 +8,9 @@ make install
 popd
 popd
 
-mkdir -p "$HOME/Pictures/Wallpapers/"
-wget -q https://w.wallhaven.cc/full/ox/wallhaven-ox19m9.jpg -O "$HOME/Pictures/Wallpapers/wallhaven-ox19m9.jpg"
-gsettings set org.gnome.desktop.background picture-uri "file://$HOME/Pictures/Wallpapers/wallhaven-ox19m9.jpg"
-gsettings set org.gnome.desktop.screensaver picture-uri "file://$HOME/Pictures/Wallpapers/wallhaven-ox19m9.jpg"
+ubuntu_wallpaper='file:///usr/share/backgrounds/warty-final-ubuntu.png'
+gsettings set org.gnome.desktop.background picture-uri $ubuntu_wallpaper
+gsettings set org.gnome.desktop.screensaver picture-uri $ubuntu_wallpaper
 
 sudo add-apt-repository -y ppa:daniruiz/flat-remix
 sudo apt-get update
