@@ -28,6 +28,9 @@ gsettings set org.gnome.desktop.screensaver lock-enabled false
 # Turn off animations
 gsettings set org.gnome.desktop.interface enable-animations false
 
+# Show hidden files
+gsettings set org.gtk.Settings.FileChooser show-hidden true
+
 # Enable login shell (why isn't enabled by default? Without it the folder)
 # $HOME/.local/bin doesn't get added to $PATH, because ~/.profile isn't read.
 profile="$(gsettings get org.gnome.Terminal.ProfilesList default)"
