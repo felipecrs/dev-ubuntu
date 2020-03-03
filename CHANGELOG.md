@@ -1,3 +1,15 @@
+## [4.2.0](https://github.com/felipecassiors/ubuntu1804-4dev/compare/v4.1.0...v4.2.0) (2020-03-03)
+
+
+### Features
+
+* **customization:** show hidden files ([a82ebfd](https://github.com/felipecassiors/ubuntu1804-4dev/commit/a82ebfdecea47e0be8cae9b093457488ab055968))
+
+
+### Bug Fixes
+
+* **customization:** properly disable lock screen ([f0ea940](https://github.com/felipecassiors/ubuntu1804-4dev/commit/f0ea940e27fd5c85da6d97e1e411ca42da1c924e))
+
 ## [4.1.0](https://github.com/felipecassiors/ubuntu1804-4dev/compare/v4.0.1...v4.1.0) (2020-03-02)
 
 
