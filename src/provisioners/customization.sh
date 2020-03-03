@@ -22,9 +22,8 @@ gsettings set org.gnome.desktop.interface gtk-theme "Flat-Remix-GTK-Blue-Dark-So
 gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix-Blue-Dark"
 gsettings set org.gnome.shell.extensions.user-theme name "Flat-Remix-Dark-fullPanel"
 
-# Turn off blank screen to do not ask for password every time
-# you pass 5 minutes away of the VM
-gsettings set org.gnome.desktop.session idle-delay 0
+# Disable lock screen
+gsettings set org.gnome.desktop.screensaver lock-enabled false
 
 # Turn off animations
 gsettings set org.gnome.desktop.interface enable-animations false
