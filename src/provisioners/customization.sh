@@ -24,6 +24,7 @@ gsettings set org.gnome.shell.extensions.user-theme name "Flat-Remix-Dark-fullPa
 
 # Disable lock screen
 gsettings set org.gnome.desktop.screensaver lock-enabled false
+gsettings set org.gnome.desktop.session idle-delay 0
 
 # Turn off animations
 gsettings set org.gnome.desktop.interface enable-animations false
