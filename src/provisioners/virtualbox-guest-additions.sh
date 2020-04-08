@@ -8,7 +8,7 @@ APT_GET="sudo DEBIAN_FRONTEND=noninteractive apt-get"
 
 # Install dependencies
 $APT_GET update
-$APT_GET install -qq "linux-headers-$(uname -r)" build-essential dkms
+$APT_GET install -yq linux-generic build-essential dkms
 
 ## Fetch latest version
 BASE_URL="https://download.virtualbox.org/virtualbox"
