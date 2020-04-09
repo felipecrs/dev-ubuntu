@@ -1,3 +1,10 @@
+### [4.2.2](https://github.com/felipecassiors/ubuntu1804-4dev/compare/v4.2.1...v4.2.2) (2020-04-09)
+
+
+### Bug Fixes
+
+* **virtualbox:** guest additions not being persisted after kernel upgrade ([2c0ef17](https://github.com/felipecassiors/ubuntu1804-4dev/commit/2c0ef17ffb2d0174d33b19d679f5464cb9668338))
+
 ### [4.2.1](https://github.com/felipecassiors/ubuntu1804-4dev/compare/v4.2.0...v4.2.1) (2020-03-05)
 
 
