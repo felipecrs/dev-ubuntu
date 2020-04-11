@@ -1,26 +1,29 @@
 #!/bin/bash
 set -euxo pipefail
 
-pushd /tmp/
-git clone https://github.com/home-sweet-gnome/dash-to-panel.git
-pushd dash-to-panel/
-make install
-popd
-popd
+# Set default session
+sudo crudini --set /var/lib/AccountsService/users/vagrant User XSession ubuntu-communitheme-snap
 
-ubuntu_wallpaper='file:///usr/share/backgrounds/warty-final-ubuntu.png'
-gsettings set org.gnome.desktop.background picture-uri $ubuntu_wallpaper
-gsettings set org.gnome.desktop.screensaver picture-uri $ubuntu_wallpaper
+# pushd /tmp/
+# git clone https://github.com/home-sweet-gnome/dash-to-panel.git
+# pushd dash-to-panel/
+# make install
+# popd
+# popd
 
-sudo add-apt-repository -y ppa:daniruiz/flat-remix
-sudo apt-get update
-sudo apt-get install -y gnome-shell-extensions flat-remix flat-remix-gtk flat-remix-gnome
+# ubuntu_wallpaper='file:///usr/share/backgrounds/warty-final-ubuntu.png'
+# gsettings set org.gnome.desktop.background picture-uri $ubuntu_wallpaper
+# gsettings set org.gnome.desktop.screensaver picture-uri $ubuntu_wallpaper
 
-gnome-shell-extension-tool -e user-theme@gnome-shell-extensions.gcampax.github.com
-gnome-shell-extension-tool -e dash-to-panel@jderose9.github.com
-gsettings set org.gnome.desktop.interface gtk-theme "Flat-Remix-GTK-Blue-Dark-Solid"
-gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix-Blue-Dark"
-gsettings set org.gnome.shell.extensions.user-theme name "Flat-Remix-Dark-fullPanel"
+# sudo add-apt-repository -y ppa:daniruiz/flat-remix
+# sudo apt-get update
+# sudo apt-get install -y gnome-shell-extensions flat-remix flat-remix-gtk flat-remix-gnome
+
+# gnome-shell-extension-tool -e user-theme@gnome-shell-extensions.gcampax.github.com
+# gnome-shell-extension-tool -e dash-to-panel@jderose9.github.com
+# gsettings set org.gnome.desktop.interface gtk-theme "Flat-Remix-GTK-Blue-Dark-Solid"
+# gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix-Blue-Dark"
+# gsettings set org.gnome.shell.extensions.user-theme name "Flat-Remix-Dark-fullPanel"
 
 # Disable lock screen
 gsettings set org.gnome.desktop.screensaver lock-enabled false
@@ -32,8 +35,8 @@ gsettings set org.gnome.desktop.interface enable-animations false
 # Show hidden files
 gsettings set org.gtk.Settings.FileChooser show-hidden true
 
-# Enable login shell (why isn't enabled by default? Without it the folder)
-# $HOME/.local/bin doesn't get added to $PATH, because ~/.profile isn't read.
+# Enable login shell (why isn't enabled by default? Without it the folder
+# $HOME/.local/bin doesn't get added to $PATH, because ~/.profile isn't read).
 profile="$(gsettings get org.gnome.Terminal.ProfilesList default)"
 profile="${profile:1:-1}"
 gsettings set "org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$profile/" login-shell true

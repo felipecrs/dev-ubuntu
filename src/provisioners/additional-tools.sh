@@ -31,8 +31,11 @@ sudo snap install jq
 sudo snap install ruby --classic
 sudo snap install node --channel=12/stable --classic
 sudo snap install shellcheck
+sudo snap install communitheme
 
 sudo npm install -g npm
+
+pip install crudini
 
 # sudo gem install haste
 
