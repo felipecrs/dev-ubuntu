@@ -1,3 +1,10 @@
+## [4.3.0](https://github.com/felipecassiors/ubuntu1804-4dev/compare/v4.2.2...v4.3.0) (2020-04-16)
+
+
+### Features
+
+* **virtualbox:** upgrade vbox ga to 6.1.6 ([c3622a6](https://github.com/felipecassiors/ubuntu1804-4dev/commit/c3622a64fec76061c4eac7b5be4d26521f65c93e))
+
 ### [4.2.2](https://github.com/felipecassiors/ubuntu1804-4dev/compare/v4.2.1...v4.2.2) (2020-04-09)
 
 
