@@ -4,12 +4,12 @@ set -euxo pipefail
 
 __dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-box='felipecassiors/ubuntu1804-4dev-test'
+box='felipecassiors/dev-ubuntu-20.04-test'
 version="$(date +'%Y%m.%d.%H%M')"
 provider='virtualbox'
 file='package.box'
-description="[**View source code in GitHub**](https://github.com/felipecassiors/ubuntu1804-4dev/commit/$(git rev-parse HEAD))"
-short_description='Testing releases from https://github.com/felipecassiors/ubuntu1804-4dev'
+description="[**View source code in GitHub**](https://github.com/felipecassiors/dev-ubuntu-20.04/commit/$(git rev-parse HEAD))"
+short_description='Testing releases from https://github.com/felipecassiors/dev-ubuntu-20.04'
 checksum="$(md5sum "$file" | cut -d " " -f 1)"
 
 vagrant cloud auth login

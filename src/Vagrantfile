@@ -5,8 +5,7 @@
 
 Vagrant.configure('2') do |config|
   # Insert SSH key (but sadly this doesn't work on Windows Host with Git Bash)
-  config.ssh.forward_agent =
-    true
+  config.ssh.forward_agent = true
 
   config.vm.provider 'virtualbox' do |vb|
     vb.gui = true
