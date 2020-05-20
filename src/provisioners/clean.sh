@@ -10,8 +10,8 @@ $APT_GET autoremove --purge -qq
 $APT_GET clean
 
 # Clean previous crash-reports
-sudo rm /var/crash/*
+shopt -s dotglob
+sudo rm -rf /var/crash/* || true
 
 # Clean temp folder
-shopt -s dotglob
 sudo rm -rf /tmp/*

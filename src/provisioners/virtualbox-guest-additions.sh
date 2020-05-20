@@ -4,7 +4,7 @@ set -euxo pipefail
 APT_GET="sudo DEBIAN_FRONTEND=noninteractive apt-get"
 
 # Remove old versions
-# $APT_GET remove -y virtualbox-guest-utils virtualbox-guest-x11 # We don't need in hashicorp/bionic64
+# $APT_GET remove -y virtualbox-guest-utils virtualbox-guest-x11
 
 # Install dependencies
 $APT_GET update
@@ -18,7 +18,7 @@ VERSION="$(wget -q -O- "${BASE_URL}/LATEST.TXT")"
 ADDITIONS_ISO="VBoxGuestAdditions_${VERSION}.iso"
 ADDITIONS_PATH="/media/VBoxGuestAdditions"
 wget -q "${BASE_URL}/${VERSION}/${ADDITIONS_ISO}"
-sudo mkdir "${ADDITIONS_PATH}"
+sudo mkdir -p "${ADDITIONS_PATH}" || true
 sudo mount -o loop,ro "${ADDITIONS_ISO}" "${ADDITIONS_PATH}"
 sudo "${ADDITIONS_PATH}/VBoxLinuxAdditions.run" || if [ "$?" = 2 ]; then true; else false; fi
 sudo umount "${ADDITIONS_PATH}"

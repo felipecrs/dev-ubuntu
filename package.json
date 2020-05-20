@@ -1,10 +1,10 @@
 {
-  "name": "ubuntu1804-4dev",
+  "name": "dev-ubuntu-20.04v",
   "version": "4.3.0",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/felipecassiors/ubuntu1804-4dev.git"
+    "url": "https://github.com/felipecassiors/dev-ubuntu-20.04.git"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",

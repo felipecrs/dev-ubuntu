@@ -6,7 +6,7 @@ vagrant destroy -f
 vagrant box update
 vagrant up
 vagrant package --vagrantfile src/Vagrantfile
-vagrant box add test package.box
+vagrant box add --force test package.box
 rm -f package.box
 mkdir test || true
 pushd test
