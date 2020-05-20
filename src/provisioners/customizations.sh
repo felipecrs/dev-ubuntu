@@ -1,26 +1,10 @@
 #!/bin/bash
 set -euxo pipefail
 
-pushd /tmp/
-git clone https://github.com/home-sweet-gnome/dash-to-panel.git
-pushd dash-to-panel/
-make install
-popd
-popd
+gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 
-ubuntu_wallpaper='file:///usr/share/backgrounds/warty-final-ubuntu.png'
-gsettings set org.gnome.desktop.background picture-uri $ubuntu_wallpaper
-gsettings set org.gnome.desktop.screensaver picture-uri $ubuntu_wallpaper
-
-sudo add-apt-repository -y ppa:daniruiz/flat-remix
-sudo apt-get update
-sudo apt-get install -y gnome-shell-extensions flat-remix flat-remix-gtk flat-remix-gnome
-
-gnome-shell-extension-tool -e user-theme@gnome-shell-extensions.gcampax.github.com
-gnome-shell-extension-tool -e dash-to-panel@jderose9.github.com
-gsettings set org.gnome.desktop.interface gtk-theme "Flat-Remix-GTK-Blue-Dark-Solid"
-gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix-Blue-Dark"
-gsettings set org.gnome.shell.extensions.user-theme name "Flat-Remix-Dark-fullPanel"
+gsettings set org.gnome.desktop.interface gtk-theme "Yaru-dark"
+gsettings set org.gnome.shell.extensions.user-theme name "Yaru-dark"
 
 # Disable lock screen
 gsettings set org.gnome.desktop.screensaver lock-enabled false
@@ -39,7 +23,7 @@ profile="${profile:1:-1}"
 gsettings set "org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$profile/" login-shell true
 
 # We set the default favorites. Why anyone would use Rythmbox in the development VM at all?
-gsettings set org.gnome.shell favorite-apps "['ubiquity.desktop', 'google-chrome.desktop', 'firefox.desktop', 'org.gnome.Nautilus.desktop', 'code_code.desktop', 'org.gnome.Terminal.desktop', 'postman_postman.desktop', 'org.gnome.Software.desktop']"
+gsettings set org.gnome.shell favorite-apps "['google-chrome.desktop', 'firefox.desktop', 'org.gnome.Nautilus.desktop', 'code_code.desktop', 'org.gnome.Terminal.desktop', 'postman_postman.desktop']"
 
 # Set VS Code as default editor for Git
 git config --global core.editor "code --wait"

@@ -11,19 +11,25 @@ sudo add-apt-repository -y ppa:git-core/ppa
 
 $APT_GET update
 
-$APT_GET install -qq \
+$APT_GET install -yq \
 	curl \
 	git \
 	python3-pip \
-	python-pip \
 	openjdk-8-jdk \
-	gnome-tweaks \
+	gnome-shell-extensions \
 	bash-completion \
-	fonts-powerline
+	fonts-powerline \
+	linux-generic \
+	build-essential \
+	dkms
+
+# Set aliases for python and pip
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
 
 wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 $APT_GET install -qq ./google-chrome-stable_current_amd64.deb
-rm google-chrome-stable_current_amd64.deb
+rm -f google-chrome-stable_current_amd64.deb
 
 sudo snap install code --classic
 sudo snap install postman
