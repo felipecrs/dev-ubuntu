@@ -21,6 +21,6 @@ wget -q "${BASE_URL}/${VERSION}/${ADDITIONS_ISO}"
 sudo mkdir "${ADDITIONS_PATH}"
 sudo mount -o loop,ro "${ADDITIONS_ISO}" "${ADDITIONS_PATH}"
 sudo "${ADDITIONS_PATH}/VBoxLinuxAdditions.run" || if [ "$?" = 2 ]; then true; else false; fi
-rm "${ADDITIONS_ISO}"
 sudo umount "${ADDITIONS_PATH}"
-sudo rmdir "${ADDITIONS_PATH}"
+rm -f "${ADDITIONS_ISO}"
+sudo rm -rf "${ADDITIONS_PATH}"
