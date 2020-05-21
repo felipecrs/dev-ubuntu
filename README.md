@@ -22,8 +22,9 @@ This box is based on [`peru/ubuntu-20.04-desktop-amd64`](https://app.vagrantup.c
 
 - VirtualBox ([download here](https://www.virtualbox.org/wiki/Downloads))
 - Vagrant ([download here](https://www.vagrantup.com/downloads.html))
-  
+
 > 💡 **Pro tip**
+>
 > On Windows, you can install both at once with [Chocolatey](https://chocolatey.org/install) with
 >
 > ```powershell
@@ -74,13 +75,13 @@ The whole process is:
 
 Clone the repository, start a new terminal there, and run:
 
-``` bash
+```bash
 vagrant up
 ```
 
 After the provision is done, you can turn the VM into a box:
 
-``` bash
+```bash
 vagrant package
 ```
 
@@ -88,6 +89,6 @@ vagrant package
 
 If you want to deploy it in your Vagrant Cloud, you can use the [`ci/deploy.sh`](scripts/deploy.sh). It needs the `VAGRANT_CLOUD_TOKEN` environment variable to be set before running.
 
-``` bash
+```bash
 ci/deploy.sh
 ```
