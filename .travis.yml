@@ -8,7 +8,7 @@ dist: bionic
 services:
   - xvfb
 before_install:
-  - curl -fsSLo- https://raw.githubusercontent.com/felipecassiors/scripts/master/install_virtualbox.sh | bash
+  - curl -fsSLo- https://raw.githubusercontent.com/felipecassiors/scripts/master/linux/install_virtualbox_deb.sh | bash
   - curl -fsSLo- https://raw.githubusercontent.com/felipecassiors/scripts/master/install_vagrant.sh | bash
 script:
   - set -e
