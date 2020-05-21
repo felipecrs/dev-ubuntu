@@ -1,6 +1,6 @@
 #!/bin/bash
 set -euxo pipefail
-
+ # test
 APT_GET="sudo DEBIAN_FRONTEND=noninteractive apt-get"
 
 # Reset machine-id to be able to enable Livepatch
