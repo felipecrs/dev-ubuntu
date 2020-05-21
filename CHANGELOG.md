@@ -1,3 +1,19 @@
+## [5.0.0](https://github.com/felipecassiors/dev-ubuntu-20.04/compare/v4.3.0...v5.0.0) (2020-05-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade to ubuntu 20.04
+
+### Features
+
+* upgrade to ubuntu 20.04 ([2762658](https://github.com/felipecassiors/dev-ubuntu-20.04/commit/2762658cc28220ea4a098a358f75551c04bfe853))
+
+
+### Bug Fixes
+
+* vbox guest additions iso not being deleted ([a94efdd](https://github.com/felipecassiors/dev-ubuntu-20.04/commit/a94efdd69d5140902aca04fe54272d610cbc8cee))
+
 ## [4.3.0](https://github.com/felipecassiors/ubuntu1804-4dev/compare/v4.2.2...v4.3.0) (2020-04-16)
 
 
