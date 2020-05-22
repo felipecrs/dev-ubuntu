@@ -1,0 +1,11 @@
+name: Manual Release
+
+on:
+  repository_dispatch:
+    types: manual-release
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
