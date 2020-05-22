@@ -17,4 +17,4 @@ jobs:
           git config user.email "felipecassiors@gmail.com"
           git commit --allow-empty -m "build(deps): manual release trigger"
       - run: |
-          git push origin master
+          git push origin HEAD:test-branch
