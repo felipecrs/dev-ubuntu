@@ -11,5 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
+          git config user.name "Felipe Santos"
+          git config user.mail "felipecassiors@gmail.com"
           git commit --allow-empty -m "build(deps): manual release trigger"
           git push origin master
