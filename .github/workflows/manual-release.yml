@@ -4,6 +4,7 @@ on:
   repository_dispatch:
     types: manual-release
   pull_request:
+  push:
 
 jobs:
   build:
