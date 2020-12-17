@@ -1,0 +1,15 @@
+name: scheduled-release
+
+on:
+  schedule:
+    - cron: 0 0 * * SUN
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          git commit --allow-empty -m "build(deps): scheduled release"
+      - run: |
+          git push origin HEAD:test-branch
