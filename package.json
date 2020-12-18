@@ -14,6 +14,7 @@
     "@semantic-release/exec": "^5.0.0",
     "@semantic-release/git": "^9.0.0",
     "commitizen": "^4.0.3",
+    "conventional-changelog-conventionalcommits": "^4.5.0",
     "cz-conventional-changelog": "^3.1.0",
     "husky": "^4.2.3",
     "prettier": "^2.0.2",
@@ -57,7 +58,21 @@
           ]
         }
       ],
-      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "presetConfig": {
+            "types": [
+              { "type": "feat", "section": "Features" },
+              { "type": "fix", "section": "Bug Fixes" },
+              { "type": "perf", "section": "Performance Improvements" },
+              { "type": "revert", "section": "Reverts" },
+              { "type": "refactor", "section": "Code Refactoring" },
+              { "type": "build", "scope": "deps", "section": "Dependencies Upgrade" }
+            ]
+          }
+        }
+      ],
       "@semantic-release/changelog",
       [
         "@semantic-release/exec",
