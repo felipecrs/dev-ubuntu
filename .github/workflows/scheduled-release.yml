@@ -10,8 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GH_TOKEN_ADMIN }}
       - run: |
           git config user.name "GitHub Actions"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
       - run: 'git commit --allow-empty -m "build(deps): periodic build"'
-      - run: git push origin master
+      - run: git push origin "$GITHUB_REF"
