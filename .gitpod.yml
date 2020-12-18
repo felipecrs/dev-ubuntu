@@ -6,13 +6,12 @@ tasks:
 
 vscode:
   extensions:
-    - DavidAnson.vscode-markdownlint@0.34.0:l4DL7iPpo7DdhfUHIUtcuQ==
-    - yzhang.markdown-all-in-one@2.7.0:5+DmuGcePw8L9PtfgOAAHg==
-    - rogalmic.bash-debug@0.3.7:VWcHnWt5BpmFsMTEe2SEVA==
     - rebornix.ruby@0.27.0:b86Iqz+ryuS7Nr77EyIClA==
-    - mads-hartmann.bash-ide-vscode@1.4.0:/qx+rdXE/fGTGWhelNf3aQ==
     - wingrunr21.vscode-ruby@0.27.0:VymtAvJQnv5jef/FsPtqJw==
-    - esbenp.prettier-vscode@3.20.0:37/f4uBlE287wUjENFq1aA==
-    - KnisterPeter.vscode-commitizen@0.8.4:tJDfPxv5PRJLQfq/0wAm3w==
-    - misogi.ruby-rubocop@0.8.3:ptn+lTc9xnktGhPEYKIf2w==
-    - timonwong.shellcheck@0.12.1:xUC3REt9ILR+PvBe48d8Rw==
+    - davidanson.vscode-markdownlint@0.38.0:MCcSWKBmgWaXjm6m9AHE2Q==
+    - yzhang.markdown-all-in-one@3.4.0:GR9Y7wA3m2/LsuZxLaCFtg==
+    - rogalmic.bash-debug@0.3.9:8w+xOBwrJt9TA7S1JlrZng==
+    - mads-hartmann.bash-ide-vscode@1.11.0:VLESO/tPCjrfzzLcJy83aQ==
+    - timonwong.shellcheck@0.12.2:rNYWy8+G5JQ4FGeagKUjeg==
+    - misogi.ruby-rubocop@0.8.5:nzEXfgn9DPI21vRRdceYBQ==
+    - esbenp.prettier-vscode@5.8.0:cd2Jz796EPVnD5zeCyctPw==
