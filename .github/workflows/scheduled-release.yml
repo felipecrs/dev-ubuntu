@@ -3,6 +3,9 @@ name: scheduled-release
 on:
   schedule:
     - cron: 0 0 * * SUN
+  push:
+    branches:
+      - manual-release
 
 jobs:
   build:

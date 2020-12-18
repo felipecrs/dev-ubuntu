@@ -36,6 +36,6 @@ Vagrant.configure('2') do |config|
 
   # Clean
   config.vm.provision 'shell',
-                      privileged: false, 
+                      privileged: false,
                       path: 'src/provisioners/clean.sh'
 end
