@@ -1,3 +1,10 @@
+### [5.0.2](https://github.com/felipecassiors/dev-ubuntu-20.04/compare/v5.0.1...v5.0.2) (2020-12-18)
+
+
+### Dependencies Upgrade
+
+* **deps:** periodic build ([0e27cad](https://github.com/felipecassiors/dev-ubuntu-20.04/commit/0e27cad4aaaf9c139c38f9e99faeb156107e14bd))
+
 ### [5.0.1](https://github.com/felipecassiors/dev-ubuntu-20.04/compare/v5.0.0...v5.0.1) (2020-05-23)
 
 ## [5.0.0](https://github.com/felipecassiors/dev-ubuntu-20.04/compare/v4.3.0...v5.0.0) (2020-05-21)
