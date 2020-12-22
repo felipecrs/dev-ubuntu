@@ -86,7 +86,7 @@
               {
                 "type": "build",
                 "scope": "deps",
-                "section": "Dependencies Upgrade"
+                "section": "Dependencies"
               }
             ]
           }
