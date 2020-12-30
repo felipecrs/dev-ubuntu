@@ -5,7 +5,6 @@
 
 Vagrant.configure('2') do |config|
   config.vm.box = 'peru/ubuntu-20.04-desktop-amd64'
-  # config.vm.box = 'bento/ubuntu-20.04'
 
   config.vm.provider 'virtualbox' do |vb|
     vb.gui = false
@@ -19,10 +18,10 @@ Vagrant.configure('2') do |config|
                       path: 'src/provisioners/upgrade-and-desktop.sh'
 
   # Upgrade VirtualBox Guest Additions
-  # config.vm.provision 'shell',
-  #                     privileged: false,
-  #                     path: 'src/provisioners/virtualbox-guest-additions.sh'
-  #                     reboot: true
+  config.vm.provision 'shell',
+                      privileged: false,
+                      path: 'src/provisioners/virtualbox-guest-additions.sh'
+                      reboot: true
 
   # Install additional tools
   config.vm.provision 'shell',
