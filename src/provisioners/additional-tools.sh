@@ -23,6 +23,9 @@ $APT_GET install -yq \
 	build-essential \
 	dkms
 
+# Install homebrew
+CI=true bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
 # Set aliases for python and pip
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
