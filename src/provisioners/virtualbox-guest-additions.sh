@@ -3,8 +3,8 @@ set -euxo pipefail
 
 APT_GET="sudo DEBIAN_FRONTEND=noninteractive apt-get"
 
-# Remove old versions
-# $APT_GET remove -y virtualbox-guest-utils virtualbox-guest-x11
+# Remove old versions if installed
+$APT_GET remove -y virtualbox-guest-utils virtualbox-guest-x11
 
 # Install dependencies
 $APT_GET update
