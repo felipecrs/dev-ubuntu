@@ -1,3 +1,10 @@
+## [5.2.0](https://github.com/felipecassiors/dev-ubuntu-20.04/compare/v5.1.0...v5.2.0) (2020-12-31)
+
+
+### Features
+
+* disable welcome screen ([#45](https://github.com/felipecassiors/dev-ubuntu-20.04/issues/45)) ([9c9eccb](https://github.com/felipecassiors/dev-ubuntu-20.04/commit/9c9eccbee1ca182f27486200ceb9aa98bac48cdb))
+
 ## [5.1.0](https://github.com/felipecassiors/dev-ubuntu-20.04/compare/v5.0.4...v5.1.0) (2020-12-31)
 
 
