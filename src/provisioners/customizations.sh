@@ -1,6 +1,10 @@
 #!/bin/bash
 set -euxo pipefail
 
+# Disable welcome screen
+mkdir -p "$HOME/.config"
+echo "yes" >>"$HOME/.config/gnome-initial-setup-done"
+
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 
 gsettings set org.gnome.desktop.interface gtk-theme "Yaru-dark"
