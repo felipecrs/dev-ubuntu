@@ -1,3 +1,10 @@
+## [5.1.0](https://github.com/felipecassiors/dev-ubuntu-20.04/compare/v5.0.4...v5.1.0) (2020-12-31)
+
+
+### Features
+
+* add Remote - Containers extension for VS Code ([#43](https://github.com/felipecassiors/dev-ubuntu-20.04/issues/43)) ([b8c8bc2](https://github.com/felipecassiors/dev-ubuntu-20.04/commit/b8c8bc29e5252d761120dca4f08758695cccb6ea))
+
 ### [5.0.4](https://github.com/felipecassiors/dev-ubuntu-20.04/compare/v5.0.3...v5.0.4) (2020-12-27)
 
 
