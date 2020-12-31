@@ -8,16 +8,19 @@ dist: bionic
 services:
   - xvfb
 before_install:
-  - curl -fsSLo- https://raw.githubusercontent.com/felipecassiors/scripts/master/linux/install_virtualbox_deb.sh | bash
-  - curl -fsSLo- https://raw.githubusercontent.com/felipecassiors/scripts/master/install_vagrant.sh | bash
+  - bash -c "$(curl -fsSL https://raw.githubusercontent.com/felipecassiors/scripts/master/linux/install_virtualbox_deb.sh)"
+  - bash -c "$(curl -fsSL https://raw.githubusercontent.com/felipecassiors/scripts/master/install_vagrant.sh)"
 script:
   - set -e
+  - ci/lint.sh
   - vagrant up
-  - vagrant package --vagrantfile src/Vagrantfile
+
 before_deploy:
+  - vagrant package --vagrantfile src/Vagrantfile
   - vagrant destroy -f # Save some disk space in case we need in the deploy test
-  - nvm install lts/*
+  - nvm install --lts
   - npm install
+
 deploy:
   - provider: script
     skip_cleanup: true
