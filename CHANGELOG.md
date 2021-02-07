@@ -1,3 +1,10 @@
+### [5.2.6](https://github.com/felipecassiors/dev-ubuntu-20.04/compare/v5.2.5...v5.2.6) (2021-02-07)
+
+
+### Dependencies
+
+* **deps:** periodic build ([3cc825f](https://github.com/felipecassiors/dev-ubuntu-20.04/commit/3cc825f7ff6bab5794bddbdab2eef22a9b3e5ca5))
+
 ### [5.2.5](https://github.com/felipecassiors/dev-ubuntu-20.04/compare/v5.2.4...v5.2.5) (2021-01-31)
 
 
