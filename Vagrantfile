@@ -5,7 +5,6 @@
 
 Vagrant.configure('2') do |config|
   config.vm.box = 'peru/ubuntu-20.04-desktop-amd64'
-  # config.vm.box = 'bento/ubuntu-20.04'
 
   config.vm.provider 'virtualbox' do |vb|
     vb.gui = false

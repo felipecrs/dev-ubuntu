@@ -1,13 +1,17 @@
 #!/bin/bash
+
 set -euxo pipefail
 
-APT_GET="sudo DEBIAN_FRONTEND=noninteractive apt-get"
+readonly APT_GET=("sudo" "DEBIAN_FRONTEND=noninteractive" "apt-get")
 
 # Remove dangling packages
-$APT_GET autoremove --purge -qq
+"${APT_GET[@]}" autoremove --purge -qq
 
 # Clean apt cache
-$APT_GET clean
+"${APT_GET[@]}" clean
+
+# Clean npm cache
+sudo npm cache clean --force
 
 # Clean previous crash-reports
 shopt -s dotglob
