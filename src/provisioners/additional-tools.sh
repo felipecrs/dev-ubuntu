@@ -1,59 +1,81 @@
 #!/bin/bash
+
 set -euxo pipefail
 
-APT_GET="sudo DEBIAN_FRONTEND=noninteractive apt-get"
+readonly APT_GET=("sudo" "DEBIAN_FRONTEND=noninteractive" "apt-get")
+readonly APT_GET_INSTALL=("${APT_GET[@]}" "install" "-yq")
+readonly CURL=("curl" "-fsSL")
 
-# Reset machine-id to be able to enable Livepatch
-# sudo rm /etc/machine-id /var/lib/dbus/machine-id && sudo systemd-machine-id-setup
+"${APT_GET[@]}" update
+"${APT_GET_INSTALL[@]}" curl
 
 # Add Git repository
-sudo add-apt-repository -y ppa:git-core/ppa
+sudo add-apt-repository --no-update -y ppa:git-core/ppa
+# Add VS Code repository
+"${CURL[@]}" https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+sudo add-apt-repository --no-update -y "deb https://packages.microsoft.com/repos/code stable main"
+# Add Adopt OpenJDK repository
+"${CURL[@]}" https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
+sudo add-apt-repository --no-update -y https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+# Add Kubernetes repository
+"${CURL[@]}" https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+sudo add-apt-repository --no-update -y "deb https://apt.kubernetes.io/ kubernetes-xenial main"
+# Add Yarn repository
+"${CURL[@]}" https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+sudo add-apt-repository --no-update -y "deb https://dl.yarnpkg.com/debian/ stable main"
+# Add Node repository
+"${CURL[@]}" https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 
-$APT_GET update
-
-$APT_GET install -yq \
-	curl \
+"${APT_GET_INSTALL[@]}" \
 	git \
 	python3-pip \
-	openjdk-8-jdk \
+	adoptopenjdk-8-hotspot \
 	gnome-shell-extensions \
 	bash-completion \
 	fonts-powerline \
 	linux-generic \
 	build-essential \
-	dkms
+	dkms \
+	jq \
+	code \
+	shellcheck \
+	kubectl \
+	nodejs \
+	yarn
 
 # Set aliases for python and pip
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
 
 wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-$APT_GET install -qq ./google-chrome-stable_current_amd64.deb
+"${APT_GET_INSTALL[@]}" ./google-chrome-stable_current_amd64.deb
 rm -f google-chrome-stable_current_amd64.deb
 
-sudo snap install code --classic
+# Install Postman
 sudo snap install postman
-sudo snap install jq
-sudo snap install ruby --classic
-sudo snap install node --channel=12/stable --classic
-sudo snap install shellcheck
 
-sudo npm install -g npm
-
-# sudo gem install haste
+# Upgrade NPM
+sudo npm install -g npm@latest
 
 # Install Docker
-curl -fsSL https://get.docker.com | sudo sh
+"${CURL[@]}" https://get.docker.com | sudo -E sh -
 sudo usermod -aG docker vagrant
-newgrp docker
 
 # Install Docker Compose
-VERSION=$(curl -fsL https://api.github.com/repos/docker/compose/releases/latest | jq .name -r)
-sudo curl -fsSL "https://github.com/docker/compose/releases/download/$VERSION/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+version=$("${CURL[@]}" https://api.github.com/repos/docker/compose/releases/latest | jq .tag_name -er)
+sudo "${CURL[@]}" -o /usr/local/bin/docker-compose "https://github.com/docker/compose/releases/download/${version}/docker-compose-$(uname -s)-$(uname -m)"
 sudo chmod +x /usr/local/bin/docker-compose
 
+# Install KinD
+version=$("${CURL[@]}" https://api.github.com/repos/kubernetes-sigs/kind/releases/latest | jq .tag_name -er)
+sudo "${CURL[@]}" -o /usr/local/bin/kind "https://github.com/kubernetes-sigs/kind/releases/download/${version}/kind-$(uname -s)-amd64"
+sudo chmod +x /usr/local/bin/kind
+
+# Install Helm 3
+"${CURL[@]}" https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | sudo -E bash -
+
 # Install argbash
-# $APT_GET install -y autoconf
+# "${APT_GET[@]}" install -y autoconf
 # curl -s https://api.github.com/repos/matejak/argbash/releases/latest | jq .tarball_url | xargs wget -O argbash.tar.gz
 # tar -zxvf argbash.tar.gz
 # pushd matejak-argbash-*/resources
