@@ -1,15 +1,24 @@
 {
-  "name": "dev-ubuntu",
+  "name": "@felipecrs/dev-ubuntu",
+  "description": "A Vagrant box with desktop, tools, and adjustments for developers",
   "version": "6.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/felipecrs/dev-ubuntu.git"
   },
+  "scripts": {
+    "lint": "scripts/lint.sh && prettier .",
+    "lint:fix": "prettier --write .",
+    "release": "semantic-release",
+    "build": "vagrant up",
+    "package": "scripts/package.sh",
+    "publish": "scripts/publish.sh"
+  },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
-    "@prettier/plugin-ruby": "^0.18.0",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@prettier/plugin-ruby": "^1.5.2",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/exec": "^5.0.0",
     "@semantic-release/git": "^9.0.0",
@@ -18,7 +27,7 @@
     "cz-conventional-changelog": "^3.1.0",
     "husky": "^4.2.3",
     "prettier": "^2.0.2",
-    "prettier-plugin-sh": "^0.4.0",
+    "prettier-plugin-sh": "^0.6.0",
     "semantic-release": "^17.0.4"
   },
   "config": {
@@ -96,12 +105,18 @@
       [
         "@semantic-release/exec",
         {
-          "prepareCmd": "npm version '${nextRelease.version}' --no-git-tag-version",
-          "publishCmd": "CHANGELOG='${nextRelease.notes}' BRANCH='${options.branch}' ci/deploy.sh"
+          "verifyConditionsCmd": "vagrant cloud auth login",
+          "prepareCmd": "scripts/package.sh && npm version '${nextRelease.version}' --no-git-tag-version",
+          "publishCmd": "CHANNEL='${nextRelease.channel}' RELEASE_NOTES='${nextRelease.notes}' scripts/publish.sh"
         }
       ],
       "@semantic-release/git",
-      "@semantic-release/github"
+      [
+        "@semantic-release/github",
+        {
+          "addReleases": "bottom"
+        }
+      ]
     ],
     "preset": "conventionalcommits"
   }

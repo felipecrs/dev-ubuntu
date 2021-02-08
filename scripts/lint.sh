@@ -32,4 +32,5 @@ if ! output="$(vagrant validate 2>&1)"; then
 		exit $exit_code
 	fi
 fi
+
 cd - >/dev/null
