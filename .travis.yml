@@ -1,7 +1,8 @@
 branches:
   only:
     - "master"
-    - "test"
+    - "beta"
+    - "alpha"
 language: generic
 os: linux
 dist: bionic
