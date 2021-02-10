@@ -1,3 +1,11 @@
+### [6.0.1](https://github.com/felipecrs/dev-ubuntu/compare/v6.0.0...v6.0.1) (2021-02-10)
+
+
+### Bug Fixes
+
+* fix vscode icon missing in favorites ([489941c](https://github.com/felipecrs/dev-ubuntu/commit/489941cef468e0e3d7c83bf56131c02d7db33f34))
+* fix vscode repositories issues with apt update ([2508660](https://github.com/felipecrs/dev-ubuntu/commit/25086604a95af8979b06581ec91d3f0a6c1bf8f6))
+
 ## [6.0.0](https://github.com/felipecrs/dev-ubuntu/compare/v5.2.6...v6.0.0) (2021-02-10)
 
 
