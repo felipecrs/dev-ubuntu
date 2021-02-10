@@ -3,9 +3,9 @@
 # This script is intended to be sourced by another
 
 if [ "$TRAVIS_BRANCH" = master ]; then
-	BASE_URL="https://app.vagrantup.com/api/v1/box/felipecassiors/dev-ubuntu-20.04"
+	BASE_URL="https://app.vagrantup.com/api/v1/box/felipecrs/dev-ubuntu"
 else
-	BASE_URL="https://app.vagrantup.com/api/v1/box/felipecassiors/dev-ubuntu-20.04-dev"
+	BASE_URL="https://app.vagrantup.com/api/v1/box/felipecrs/dev-ubuntu-alpha"
 fi
 VERSION="$(jq -r ".version" package.json)"
 DESCRIPTION="$CHANGELOG"
