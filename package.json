@@ -96,8 +96,8 @@
       [
         "@semantic-release/exec",
         {
-          "prepareCmd": "npm version \"${nextRelease.version}\" --no-git-tag-version",
-          "publishCmd": "CHANGELOG=\"${nextRelease.notes}\" BRANCH=\"${options.branch}\" ci/deploy.sh"
+          "prepareCmd": "npm version '${nextRelease.version}' --no-git-tag-version",
+          "publishCmd": "CHANGELOG='${nextRelease.notes}' BRANCH='${options.branch}' ci/deploy.sh"
         }
       ],
       "@semantic-release/git",
