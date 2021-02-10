@@ -1,10 +1,10 @@
 {
-  "name": "dev-ubuntu-20.04v",
+  "name": "dev-ubuntu",
   "version": "5.2.6",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/felipecrs/dev-ubuntu-20.04.git"
+    "url": "https://github.com/felipecrs/dev-ubuntu.git"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",

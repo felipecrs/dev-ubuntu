@@ -1,83 +1,83 @@
-### [5.2.6](https://github.com/felipecrs/dev-ubuntu-20.04/compare/v5.2.5...v5.2.6) (2021-02-07)
+### [5.2.6](https://github.com/felipecrs/dev-ubuntu/compare/v5.2.5...v5.2.6) (2021-02-07)
 
 
 ### Dependencies
 
-* **deps:** periodic build ([3cc825f](https://github.com/felipecrs/dev-ubuntu-20.04/commit/3cc825f7ff6bab5794bddbdab2eef22a9b3e5ca5))
+* **deps:** periodic build ([3cc825f](https://github.com/felipecrs/dev-ubuntu/commit/3cc825f7ff6bab5794bddbdab2eef22a9b3e5ca5))
 
-### [5.2.5](https://github.com/felipecrs/dev-ubuntu-20.04/compare/v5.2.4...v5.2.5) (2021-01-31)
-
-
-### Dependencies
-
-* **deps:** periodic build ([1d1b250](https://github.com/felipecrs/dev-ubuntu-20.04/commit/1d1b2502c0ab28418d1d0e22cbf00bcae77a3d41))
-
-### [5.2.4](https://github.com/felipecrs/dev-ubuntu-20.04/compare/v5.2.3...v5.2.4) (2021-01-24)
+### [5.2.5](https://github.com/felipecrs/dev-ubuntu/compare/v5.2.4...v5.2.5) (2021-01-31)
 
 
 ### Dependencies
 
-* **deps:** periodic build ([1883457](https://github.com/felipecrs/dev-ubuntu-20.04/commit/188345713f66364ab5a5f702f57c4f99abadf510))
+* **deps:** periodic build ([1d1b250](https://github.com/felipecrs/dev-ubuntu/commit/1d1b2502c0ab28418d1d0e22cbf00bcae77a3d41))
 
-### [5.2.3](https://github.com/felipecrs/dev-ubuntu-20.04/compare/v5.2.2...v5.2.3) (2021-01-17)
-
-
-### Dependencies
-
-* **deps:** periodic build ([c91963b](https://github.com/felipecrs/dev-ubuntu-20.04/commit/c91963b3f42cfc0e5b3a2a07be6f334f12f6e82f))
-
-### [5.2.2](https://github.com/felipecrs/dev-ubuntu-20.04/compare/v5.2.1...v5.2.2) (2021-01-10)
+### [5.2.4](https://github.com/felipecrs/dev-ubuntu/compare/v5.2.3...v5.2.4) (2021-01-24)
 
 
 ### Dependencies
 
-* **deps:** periodic build ([33ff5d6](https://github.com/felipecrs/dev-ubuntu-20.04/commit/33ff5d6826f315e03e9abd536c6ca3d093cdccd8))
+* **deps:** periodic build ([1883457](https://github.com/felipecrs/dev-ubuntu/commit/188345713f66364ab5a5f702f57c4f99abadf510))
 
-### [5.2.1](https://github.com/felipecrs/dev-ubuntu-20.04/compare/v5.2.0...v5.2.1) (2021-01-03)
+### [5.2.3](https://github.com/felipecrs/dev-ubuntu/compare/v5.2.2...v5.2.3) (2021-01-17)
 
 
 ### Dependencies
 
-* **deps:** periodic build ([0036e7d](https://github.com/felipecrs/dev-ubuntu-20.04/commit/0036e7d052cd69f8a086bf801023cba01407d1e6))
+* **deps:** periodic build ([c91963b](https://github.com/felipecrs/dev-ubuntu/commit/c91963b3f42cfc0e5b3a2a07be6f334f12f6e82f))
 
-## [5.2.0](https://github.com/felipecrs/dev-ubuntu-20.04/compare/v5.1.0...v5.2.0) (2020-12-31)
+### [5.2.2](https://github.com/felipecrs/dev-ubuntu/compare/v5.2.1...v5.2.2) (2021-01-10)
+
+
+### Dependencies
+
+* **deps:** periodic build ([33ff5d6](https://github.com/felipecrs/dev-ubuntu/commit/33ff5d6826f315e03e9abd536c6ca3d093cdccd8))
+
+### [5.2.1](https://github.com/felipecrs/dev-ubuntu/compare/v5.2.0...v5.2.1) (2021-01-03)
+
+
+### Dependencies
+
+* **deps:** periodic build ([0036e7d](https://github.com/felipecrs/dev-ubuntu/commit/0036e7d052cd69f8a086bf801023cba01407d1e6))
+
+## [5.2.0](https://github.com/felipecrs/dev-ubuntu/compare/v5.1.0...v5.2.0) (2020-12-31)
 
 
 ### Features
 
-* disable welcome screen ([#45](https://github.com/felipecrs/dev-ubuntu-20.04/issues/45)) ([9c9eccb](https://github.com/felipecrs/dev-ubuntu-20.04/commit/9c9eccbee1ca182f27486200ceb9aa98bac48cdb))
+* disable welcome screen ([#45](https://github.com/felipecrs/dev-ubuntu/issues/45)) ([9c9eccb](https://github.com/felipecrs/dev-ubuntu/commit/9c9eccbee1ca182f27486200ceb9aa98bac48cdb))
 
-## [5.1.0](https://github.com/felipecrs/dev-ubuntu-20.04/compare/v5.0.4...v5.1.0) (2020-12-31)
+## [5.1.0](https://github.com/felipecrs/dev-ubuntu/compare/v5.0.4...v5.1.0) (2020-12-31)
 
 
 ### Features
 
-* add Remote - Containers extension for VS Code ([#43](https://github.com/felipecrs/dev-ubuntu-20.04/issues/43)) ([b8c8bc2](https://github.com/felipecrs/dev-ubuntu-20.04/commit/b8c8bc29e5252d761120dca4f08758695cccb6ea))
+* add Remote - Containers extension for VS Code ([#43](https://github.com/felipecrs/dev-ubuntu/issues/43)) ([b8c8bc2](https://github.com/felipecrs/dev-ubuntu/commit/b8c8bc29e5252d761120dca4f08758695cccb6ea))
 
-### [5.0.4](https://github.com/felipecrs/dev-ubuntu-20.04/compare/v5.0.3...v5.0.4) (2020-12-27)
+### [5.0.4](https://github.com/felipecrs/dev-ubuntu/compare/v5.0.3...v5.0.4) (2020-12-27)
 
 
 ### Dependencies
 
-* **deps:** periodic build ([d509e96](https://github.com/felipecrs/dev-ubuntu-20.04/commit/d509e966ab4ce301bc48c16ac0cb110a88ce8e50))
+* **deps:** periodic build ([d509e96](https://github.com/felipecrs/dev-ubuntu/commit/d509e966ab4ce301bc48c16ac0cb110a88ce8e50))
 
-### [5.0.3](https://github.com/felipecrs/dev-ubuntu-20.04/compare/v5.0.2...v5.0.3) (2020-12-20)
-
-
-### Dependencies Upgrade
-
-* **deps:** periodic build ([4bade5f](https://github.com/felipecrs/dev-ubuntu-20.04/commit/4bade5f7c39a1a62ce65bbc1aadeb07a12f1792e))
-
-### [5.0.2](https://github.com/felipecrs/dev-ubuntu-20.04/compare/v5.0.1...v5.0.2) (2020-12-18)
+### [5.0.3](https://github.com/felipecrs/dev-ubuntu/compare/v5.0.2...v5.0.3) (2020-12-20)
 
 
 ### Dependencies Upgrade
 
-* **deps:** periodic build ([0e27cad](https://github.com/felipecrs/dev-ubuntu-20.04/commit/0e27cad4aaaf9c139c38f9e99faeb156107e14bd))
+* **deps:** periodic build ([4bade5f](https://github.com/felipecrs/dev-ubuntu/commit/4bade5f7c39a1a62ce65bbc1aadeb07a12f1792e))
 
-### [5.0.1](https://github.com/felipecrs/dev-ubuntu-20.04/compare/v5.0.0...v5.0.1) (2020-05-23)
+### [5.0.2](https://github.com/felipecrs/dev-ubuntu/compare/v5.0.1...v5.0.2) (2020-12-18)
 
-## [5.0.0](https://github.com/felipecrs/dev-ubuntu-20.04/compare/v4.3.0...v5.0.0) (2020-05-21)
+
+### Dependencies Upgrade
+
+* **deps:** periodic build ([0e27cad](https://github.com/felipecrs/dev-ubuntu/commit/0e27cad4aaaf9c139c38f9e99faeb156107e14bd))
+
+### [5.0.1](https://github.com/felipecrs/dev-ubuntu/compare/v5.0.0...v5.0.1) (2020-05-23)
+
+## [5.0.0](https://github.com/felipecrs/dev-ubuntu/compare/v4.3.0...v5.0.0) (2020-05-21)
 
 
 ### ⚠ BREAKING CHANGES
@@ -86,12 +86,12 @@
 
 ### Features
 
-* upgrade to ubuntu 20.04 ([2762658](https://github.com/felipecrs/dev-ubuntu-20.04/commit/2762658cc28220ea4a098a358f75551c04bfe853))
+* upgrade to ubuntu 20.04 ([2762658](https://github.com/felipecrs/dev-ubuntu/commit/2762658cc28220ea4a098a358f75551c04bfe853))
 
 
 ### Bug Fixes
 
-* vbox guest additions iso not being deleted ([a94efdd](https://github.com/felipecrs/dev-ubuntu-20.04/commit/a94efdd69d5140902aca04fe54272d610cbc8cee))
+* vbox guest additions iso not being deleted ([a94efdd](https://github.com/felipecrs/dev-ubuntu/commit/a94efdd69d5140902aca04fe54272d610cbc8cee))
 
 ## [4.3.0](https://github.com/felipecrs/ubuntu1804-4dev/compare/v4.2.2...v4.3.0) (2020-04-16)
 
