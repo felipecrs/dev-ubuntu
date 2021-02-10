@@ -11,9 +11,6 @@ readonly CURL=("curl" "-fsSL")
 
 # Add Git repository
 sudo add-apt-repository --no-update -y ppa:git-core/ppa
-# Add VS Code repository
-"${CURL[@]}" https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-sudo add-apt-repository --no-update -y "deb https://packages.microsoft.com/repos/code stable main"
 # Add Adopt OpenJDK repository
 "${CURL[@]}" https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
 sudo add-apt-repository --no-update -y https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
@@ -37,7 +34,6 @@ sudo add-apt-repository --no-update -y "deb https://dl.yarnpkg.com/debian/ stabl
 	build-essential \
 	dkms \
 	jq \
-	code \
 	shellcheck \
 	kubectl \
 	nodejs \
@@ -47,6 +43,12 @@ sudo add-apt-repository --no-update -y "deb https://dl.yarnpkg.com/debian/ stabl
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
 
+# Install VS Code
+wget -q "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" -O vscode.deb
+sudo apt install ./vscode.deb
+rm -f vscode.deb
+
+# Install Google Chrome
 wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 "${APT_GET_INSTALL[@]}" ./google-chrome-stable_current_amd64.deb
 rm -f google-chrome-stable_current_amd64.deb
