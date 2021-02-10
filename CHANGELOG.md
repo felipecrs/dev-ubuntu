@@ -3,7 +3,7 @@
 
 ### ⚠ BREAKING CHANGES
 
-* This will cause 404 if users try to download the box with Vagrant using the old name. This also happens if you try to update the box with `vagrant box update`. So, make sure you edit the box name in your `Vagrantfile` (example [here](https://github.com/felipecrs/my-dev-ubuntu-20.04/commit/e00d887845475e21b8ce014f94fe25dbac7e3e60#diff-1ea02434f746b6d1522cdef3d4a56e57cf2d5a72c5273927746a71eaf06d74fdR5)).
+* This will cause 404 if users try to download the box with Vagrant using the old name. This also happens if you try to update the box with `vagrant box update`. So, make sure you edit the box name in your `Vagrantfile` (example [here](https://github.com/felipecrs/my-dev-ubuntu/commit/e00d887845475e21b8ce014f94fe25dbac7e3e60#diff-1ea02434f746b6d1522cdef3d4a56e57cf2d5a72c5273927746a71eaf06d74fdR5)).
 * remove `ruby`
 
 ### Features

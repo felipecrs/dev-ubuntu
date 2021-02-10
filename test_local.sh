@@ -12,7 +12,9 @@ mkdir test || true
 pushd test
 vagrant init test
 vagrant up
-echo; read -rsn1 -p "Press any key to continue . . ."; echo
+echo
+read -rsn1 -p "Press any key to continue . . ."
+echo
 vagrant destroy -f
 vagrant box remove test
 popd
