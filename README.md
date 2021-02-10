@@ -1,4 +1,4 @@
-# **Dev Ubuntu 20.04** <!-- omit in toc -->
+# **Dev Ubuntu** <!-- omit in toc -->
 
 ## A Vagrant box with desktop, tools, and adjustments for developers <!-- omit in toc -->
 
