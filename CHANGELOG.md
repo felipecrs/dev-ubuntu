@@ -1,3 +1,20 @@
+## [6.0.0](https://github.com/felipecrs/dev-ubuntu/compare/v5.2.6...v6.0.0) (2021-02-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* This will cause 404 if users try to download the box with Vagrant using the old name. This also happens if you try to update the box with `vagrant box update`. So, make sure you edit the box name in your `Vagrantfile` (example [here](https://github.com/felipecrs/my-dev-ubuntu-20.04/commit/e00d887845475e21b8ce014f94fe25dbac7e3e60#diff-1ea02434f746b6d1522cdef3d4a56e57cf2d5a72c5273927746a71eaf06d74fdR5)).
+* remove `ruby`
+
+### Features
+
+* use vscode from apt, add kubectl, use adopt openjdk ([#46](https://github.com/felipecrs/dev-ubuntu/issues/46)) ([64f3403](https://github.com/felipecrs/dev-ubuntu/commit/64f340322a649c2476931e1740a6f3b4ad185b94))
+
+
+### chore
+
+* rename project from dev-ubuntu-20.04 to dev-ubuntu ([#48](https://github.com/felipecrs/dev-ubuntu/issues/48)) ([bee957e](https://github.com/felipecrs/dev-ubuntu/commit/bee957e17574f6699c9873eeb65c9cd563e948df))
+
 ### [5.2.6](https://github.com/felipecrs/dev-ubuntu/compare/v5.2.5...v5.2.6) (2021-02-07)
 
 
