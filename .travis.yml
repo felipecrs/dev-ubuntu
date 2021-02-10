@@ -9,8 +9,8 @@ dist: bionic
 services:
   - xvfb
 before_install:
-  - bash -c "$(curl -fsSL https://raw.githubusercontent.com/felipecassiors/scripts/master/linux/install_virtualbox_deb.sh)"
-  - bash -c "$(curl -fsSL https://raw.githubusercontent.com/felipecassiors/scripts/master/install_vagrant.sh)"
+  - bash -c "$(curl -fsSL https://raw.githubusercontent.com/felipecrs/scripts/HEAD/linux/install_virtualbox_deb.sh)"
+  - bash -c "$(curl -fsSL https://raw.githubusercontent.com/felipecrs/scripts/HEAD/install_vagrant.sh)"
 script:
   - set -e
   - ci/lint.sh

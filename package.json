@@ -4,7 +4,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/felipecassiors/dev-ubuntu-20.04.git"
+    "url": "https://github.com/felipecrs/dev-ubuntu-20.04.git"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
