@@ -1,7 +1,7 @@
 {
   "name": "@felipecrs/dev-ubuntu",
   "description": "A Vagrant box with desktop, tools, and adjustments for developers",
-  "version": "6.0.1",
+  "version": "6.0.2",
   "license": "MIT",
   "repository": {
     "type": "git",
