@@ -33,6 +33,10 @@ gsettings set org.gnome.shell favorite-apps "['google-chrome.desktop', 'firefox.
 # Set Chrome as the default browser
 xdg-settings set default-web-browser google-chrome.desktop
 
+# Disable Chrome first run window
+mkdir -p "$HOME/.config/google-chrome/"
+touch "$HOME/.config/google-chrome/First Run"
+
 # Set VS Code as the default text editor
 xdg-mime default code.desktop text/plain
 
