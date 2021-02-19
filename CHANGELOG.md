@@ -1,3 +1,12 @@
+## [6.1.0](https://github.com/felipecrs/dev-ubuntu/compare/v6.0.2...v6.1.0) (2021-02-19)
+
+
+### Features
+
+* disable chrome first run screen ([e8452b6](https://github.com/felipecrs/dev-ubuntu/commit/e8452b63bcec349711d09cb6f74e90e905fb54fe))
+* set chrome as the default browser ([599fa13](https://github.com/felipecrs/dev-ubuntu/commit/599fa135a8cc4ee28f7c89fd555c7758e3add626))
+* set vscode as default editor ([7e40af8](https://github.com/felipecrs/dev-ubuntu/commit/7e40af8c437ecddcc6f018e5ca075275fe30ee7e))
+
 ### [6.0.2](https://github.com/felipecrs/dev-ubuntu/compare/v6.0.1...v6.0.2) (2021-02-14)
 
 
