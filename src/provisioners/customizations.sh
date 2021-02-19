@@ -30,6 +30,9 @@ gsettings set "org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/prof
 # We set the default favorites. Why anyone would use Rythmbox in the development VM at all?
 gsettings set org.gnome.shell favorite-apps "['google-chrome.desktop', 'firefox.desktop', 'org.gnome.Nautilus.desktop', 'code.desktop', 'org.gnome.Terminal.desktop', 'postman_postman.desktop']"
 
+# Set VS Code as the default text editor
+xdg-mime default code.desktop text/plain
+
 # Set VS Code as default editor for Git
 git config --global core.editor "code --wait"
 
