@@ -1,3 +1,10 @@
+### [6.1.1](https://github.com/felipecrs/dev-ubuntu/compare/v6.1.0...v6.1.1) (2021-02-21)
+
+
+### Dependencies
+
+* **deps:** periodic build ([3f483f7](https://github.com/felipecrs/dev-ubuntu/commit/3f483f77a2e44de43642c20f10a1a6edb33c8a89))
+
 ## [6.1.0](https://github.com/felipecrs/dev-ubuntu/compare/v6.0.2...v6.1.0) (2021-02-19)
 
 
