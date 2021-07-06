@@ -7,7 +7,7 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![Vagrant box size](https://img.shields.io/endpoint?url=https://runkit.io/felipecrs/vagrant-box-size/6.0.0/felipecrs/dev-ubuntu)](https://app.vagrantup.com/felipecrs/boxes/dev-ubuntu)
+[![Vagrant box size](https://img.shields.io/endpoint?url=https://runkit.io/felipecassiors/vagrant-box-size/6.0.0/felipecrs/dev-ubuntu)](https://app.vagrantup.com/felipecrs/boxes/dev-ubuntu)
 
 This box is based on [`peru/ubuntu-20.04-desktop-amd64`](https://app.vagrantup.com/peru/boxes/ubuntu-20.04-desktop-amd64), which is a vagrant box for Ubuntu 20.04 Desktop.
 
