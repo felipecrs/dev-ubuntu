@@ -1,3 +1,15 @@
+## Deprecation notice
+
+I have not been using this box anymore because I prefer to use WSL2 on Windows rather than VirtualBox, so it does not make sense to me to keep maintaining it.
+
+Furthermore, I have putted much more effort on [my dotfiles](https://github.com/felipecrs/dotfiles), which contains the latest and greatest enhancements, and then I use it to bootstrap any VM with a single command. That means that for me, [my dotfiles](https://github.com/felipecrs/dotfiles) is replacing this project.
+
+If this project worked well for you and you would like to keep using it (instead of moving to some dotfiles-like approach), I would suggest you to fork this repository and setup your own.
+
+Ephemeral development environments such as Gitpod and GitHub Codespaces has never been so popular, and that is another reason why not to use a heavy VM.
+
+The latest version of this box will still be available in Vagrant Cloud to download, but no more versions will be published, including the periodic builds.
+
 # **Dev Ubuntu** <!-- omit in toc -->
 
 ## A Vagrant box with desktop, tools, and adjustments for developers <!-- omit in toc -->
