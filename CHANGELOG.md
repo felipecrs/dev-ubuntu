@@ -1,3 +1,14 @@
+## [7.0.0](https://github.com/felipecrs/dev-ubuntu/compare/v6.1.31...v7.0.0) (2021-10-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* This project is now deprecated. Learn more about it at [here](https://github.com/felipecrs/dev-ubuntu#deprecation-notice).
+
+### chore
+
+* deprecate this project ([#50](https://github.com/felipecrs/dev-ubuntu/issues/50)) ([6c4e021](https://github.com/felipecrs/dev-ubuntu/commit/6c4e0213c78ebabc1a5f23d63e83603fbf762d6f))
+
 ### [6.1.31](https://github.com/felipecrs/dev-ubuntu/compare/v6.1.30...v6.1.31) (2021-10-03)
 
 
