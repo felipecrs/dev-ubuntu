@@ -2,7 +2,7 @@
 
 I have not been using this box anymore because I prefer to use WSL2 on Windows rather than VirtualBox, so it does not make sense to me to keep maintaining it.
 
-Furthermore, I have putted much more effort on [my dotfiles](https://github.com/felipecrs/dotfiles), which contains the latest and greatest enhancements, and then I use it to bootstrap any VM with a single command. That means that for me, [my dotfiles](https://github.com/felipecrs/dotfiles) is replacing this project.
+Furthermore, I have putted much more effort on [my dotfiles](https://github.com/felipecrs/dotfiles), which contains the latest and greatest enhancements, and then I use it to bootstrap any VM with a single command. That means that for me, [my dotfiles project](https://github.com/felipecrs/dotfiles) is replacing dev-ubuntu.
 
 If this project worked well for you and you would like to keep using it (instead of moving to some dotfiles-like approach), I would suggest you to fork this repository and setup your own.
 
