@@ -8,7 +8,7 @@ If this project worked well for you and you would like to keep using it (instead
 
 Ephemeral development environments such as Gitpod and GitHub Codespaces has never been so popular, and that is another reason why not to use a heavy VM.
 
-The latest version of this box will still be available in Vagrant Cloud to download, but no more versions will be published, including the periodic builds.
+The latest version of this box will still be available in Vagrant Cloud to download, but no more versions will be published, including the periodic builds. Older versions were deleted to due to space saving.
 
 # **Dev Ubuntu** <!-- omit in toc -->
 
